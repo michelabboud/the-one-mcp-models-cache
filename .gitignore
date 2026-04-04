@@ -1,0 +1,13 @@
+# Model files are distributed via GitHub Releases, NOT tracked in git
+*.onnx
+*.onnx_data
+*.bin
+*.safetensors
+
+# Packaged archives
+dist/
+*.tar.gz
+
+# OS
+.DS_Store
+Thumbs.db
