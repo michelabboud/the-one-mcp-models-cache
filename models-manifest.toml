@@ -1,0 +1,267 @@
+# ╔══════════════════════════════════════════════════════════════════════╗
+# ║  Model Manifest — single source of truth for all scripts            ║
+# ║                                                                      ║
+# ║  Used by: download-model.sh, sync-release.sh, package-models.sh    ║
+# ║  Updated by: check-updates.sh when new versions are found          ║
+# ╚══════════════════════════════════════════════════════════════════════╝
+
+[meta]
+release_tag = "fastembed-v4"
+fastembed_crate_version = "4"
+last_checked = "2026-04-04"
+repo = "michelabboud/the-one-mcp-models-cache"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Embedding Models
+# ═══════════════════════════════════════════════════════════════════════
+
+# ── sentence-transformers ──────────────────────────────────────────────
+
+[models.all-MiniLM-L6-v2]
+family = "sentence-transformers"
+type = "embedding"
+huggingface_repo = "sentence-transformers/all-MiniLM-L6-v2"
+huggingface_url = "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2"
+onnx_source = "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/main/onnx/model_quantized.onnx"
+fastembed_cache_dir = "fast-all-MiniLM-L6-v2"
+dims = 384
+size_mb = 23
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+[models.all-MiniLM-L12-v2]
+family = "sentence-transformers"
+type = "embedding"
+huggingface_repo = "sentence-transformers/all-MiniLM-L12-v2"
+huggingface_url = "https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2"
+onnx_source = "https://huggingface.co/Xenova/all-MiniLM-L12-v2/resolve/main/onnx/model_quantized.onnx"
+fastembed_cache_dir = "fast-all-MiniLM-L12-v2"
+dims = 384
+size_mb = 33
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+[models.paraphrase-multilingual-MiniLM-L12-v2]
+family = "sentence-transformers"
+type = "embedding"
+huggingface_repo = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+huggingface_url = "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+onnx_source = "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model_quantized.onnx"
+fastembed_cache_dir = "fast-paraphrase-multilingual-MiniLM-L12-v2"
+dims = 384
+size_mb = 45
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+# ── BAAI (BGE) ─────────────────────────────────────────────────────────
+
+[models.BGE-small-en-v1_5]
+family = "baai"
+type = "embedding"
+huggingface_repo = "BAAI/bge-small-en-v1.5"
+huggingface_url = "https://huggingface.co/BAAI/bge-small-en-v1.5"
+onnx_source = "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-bge-small-en-v1.5"
+dims = 384
+size_mb = 24
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.BGE-base-en-v1_5]
+family = "baai"
+type = "embedding"
+huggingface_repo = "BAAI/bge-base-en-v1.5"
+huggingface_url = "https://huggingface.co/BAAI/bge-base-en-v1.5"
+onnx_source = "https://huggingface.co/Xenova/bge-base-en-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-bge-base-en-v1.5"
+dims = 768
+size_mb = 50
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.BGE-large-en-v1_5]
+family = "baai"
+type = "embedding"
+huggingface_repo = "BAAI/bge-large-en-v1.5"
+huggingface_url = "https://huggingface.co/BAAI/bge-large-en-v1.5"
+onnx_source = "https://huggingface.co/Xenova/bge-large-en-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-bge-large-en-v1.5"
+dims = 1024
+size_mb = 130
+license = "MIT"
+version = "2025-01"
+default = true
+sha256 = ""
+
+# ── intfloat (Multilingual E5) ─────────────────────────────────────────
+
+[models.multilingual-e5-small]
+family = "intfloat"
+type = "embedding"
+huggingface_repo = "intfloat/multilingual-e5-small"
+huggingface_url = "https://huggingface.co/intfloat/multilingual-e5-small"
+onnx_source = "https://huggingface.co/Xenova/multilingual-e5-small/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-multilingual-e5-small"
+dims = 384
+size_mb = 45
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.multilingual-e5-base]
+family = "intfloat"
+type = "embedding"
+huggingface_repo = "intfloat/multilingual-e5-base"
+huggingface_url = "https://huggingface.co/intfloat/multilingual-e5-base"
+onnx_source = "https://huggingface.co/Xenova/multilingual-e5-base/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-multilingual-e5-base"
+dims = 768
+size_mb = 90
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.multilingual-e5-large]
+family = "intfloat"
+type = "embedding"
+huggingface_repo = "intfloat/multilingual-e5-large"
+huggingface_url = "https://huggingface.co/intfloat/multilingual-e5-large"
+onnx_source = "https://huggingface.co/Xenova/multilingual-e5-large/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-multilingual-e5-large"
+dims = 1024
+size_mb = 220
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+# ── Nomic AI ───────────────────────────────────────────────────────────
+
+[models.nomic-embed-text-v1]
+family = "nomic-ai"
+type = "embedding"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1"
+huggingface_url = "https://huggingface.co/nomic-ai/nomic-embed-text-v1"
+onnx_source = "https://huggingface.co/nomic-ai/nomic-embed-text-v1/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-nomic-embed-text-v1"
+dims = 768
+size_mb = 55
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+[models.nomic-embed-text-v1_5]
+family = "nomic-ai"
+type = "embedding"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1.5"
+huggingface_url = "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5"
+onnx_source = "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-nomic-embed-text-v1.5"
+dims = 768
+size_mb = 55
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+# ── Mixedbread AI ──────────────────────────────────────────────────────
+
+[models.mxbai-embed-large-v1]
+family = "mixedbread-ai"
+type = "embedding"
+huggingface_repo = "mixedbread-ai/mxbai-embed-large-v1"
+huggingface_url = "https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1"
+onnx_source = "https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-mxbai-embed-large-v1"
+dims = 1024
+size_mb = 130
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+# ── Alibaba GTE ────────────────────────────────────────────────────────
+
+[models.gte-base-en-v1_5]
+family = "alibaba-gte"
+type = "embedding"
+huggingface_repo = "Alibaba-NLP/gte-base-en-v1.5"
+huggingface_url = "https://huggingface.co/Alibaba-NLP/gte-base-en-v1.5"
+onnx_source = "https://huggingface.co/Xenova/gte-base-en-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-gte-base-en-v1.5"
+dims = 768
+size_mb = 50
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.gte-large-en-v1_5]
+family = "alibaba-gte"
+type = "embedding"
+huggingface_repo = "Alibaba-NLP/gte-large-en-v1.5"
+huggingface_url = "https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5"
+onnx_source = "https://huggingface.co/Xenova/gte-large-en-v1.5/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-gte-large-en-v1.5"
+dims = 1024
+size_mb = 130
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+# ═══════════════════════════════════════════════════════════════════════
+# Reranker Models
+# ═══════════════════════════════════════════════════════════════════════
+
+[models.BGE-reranker-base]
+family = "baai"
+type = "reranker"
+huggingface_repo = "BAAI/bge-reranker-base"
+huggingface_url = "https://huggingface.co/BAAI/bge-reranker-base"
+onnx_source = "https://huggingface.co/Xenova/bge-reranker-base/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-bge-reranker-base"
+dims = 0
+size_mb = 50
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.BGE-reranker-v2-m3]
+family = "baai"
+type = "reranker"
+huggingface_repo = "BAAI/bge-reranker-v2-m3"
+huggingface_url = "https://huggingface.co/BAAI/bge-reranker-v2-m3"
+onnx_source = "https://huggingface.co/Xenova/bge-reranker-v2-m3/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-bge-reranker-v2-m3"
+dims = 0
+size_mb = 130
+license = "MIT"
+version = "2025-01"
+sha256 = ""
+
+[models.jina-reranker-v1-turbo-en]
+family = "jina-ai"
+type = "reranker"
+huggingface_repo = "jinaai/jina-reranker-v1-turbo-en"
+huggingface_url = "https://huggingface.co/jinaai/jina-reranker-v1-turbo-en"
+onnx_source = "https://huggingface.co/jinaai/jina-reranker-v1-turbo-en/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-jina-reranker-v1-turbo-en"
+dims = 0
+size_mb = 50
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
+
+[models.jina-reranker-v2-base-multilingual]
+family = "jina-ai"
+type = "reranker"
+huggingface_repo = "jinaai/jina-reranker-v2-base-multilingual"
+huggingface_url = "https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual"
+onnx_source = "https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual/resolve/main/onnx/model.onnx"
+fastembed_cache_dir = "fast-jina-reranker-v2-base-multilingual"
+dims = 0
+size_mb = 110
+license = "Apache-2.0"
+version = "2025-01"
+sha256 = ""
