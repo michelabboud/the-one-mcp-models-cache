@@ -43,11 +43,11 @@ case "${1:-}" in
         echo ""
         printf "  ${DIM}%-40s %-10s %-6s %-7s %s${NC}\n" "Model" "Type" "Dims" "Size" "License"
         printf "  ${DIM}%-40s %-10s %-6s %-7s %s${NC}\n" "────────────────────────────────────────" "──────────" "──────" "───────" "───────"
-        while IFS='|' read -r key family type hf_repo cache_dir dims size_mb license version sha256 is_default onnx_src; do
+        while IFS='|' read -r key name family type hf_repo cache_dir dims size_mb license version sha256 is_default onnx_src; do
             if [ "$is_default" = "1" ]; then
-                printf "  ${GREEN}${BOLD}%-40s${NC} %-10s %-6s %-5sMB %s ${GREEN}(default)${NC}\n" "$key" "$type" "$dims" "$size_mb" "$license"
+                printf "  ${GREEN}${BOLD}%-40s${NC} %-10s %-6s %-5sMB %s ${GREEN}(default)${NC}\n" "$name" "$type" "$dims" "$size_mb" "$license"
             else
-                printf "  %-40s %-10s %-6s %-5sMB %s\n" "$key" "$type" "$dims" "$size_mb" "$license"
+                printf "  %-40s %-10s %-6s %-5sMB %s\n" "$name" "$type" "$dims" "$size_mb" "$license"
             fi
         done < <(parse_manifest)
         echo ""
@@ -58,12 +58,12 @@ case "${1:-}" in
         while IFS= read -r key; do targets+=("$key"); done < <(get_model_keys)
         ;;
     --embeddings)
-        while IFS='|' read -r key _ type _ _ _ _ _ _ _ _ _; do
+        while IFS='|' read -r key name family type _rest; do
             [ "$type" = "embedding" ] && targets+=("$key")
         done < <(parse_manifest)
         ;;
     --rerankers)
-        while IFS='|' read -r key _ type _ _ _ _ _ _ _ _ _; do
+        while IFS='|' read -r key name family type _rest; do
             [ "$type" = "reranker" ] && targets+=("$key")
         done < <(parse_manifest)
         ;;
@@ -105,7 +105,7 @@ download_model() {
     local archive="${model}.tar.gz"
     local tmp_file="${CACHE_DIR}/${archive}"
     local expected_sha256
-    expected_sha256=$(get_model_field "$model" 10)
+    expected_sha256=$(get_model_field "$model" 11)
 
     info "Downloading ${model}..."
 

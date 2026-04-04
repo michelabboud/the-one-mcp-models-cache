@@ -104,7 +104,7 @@ else:
 info "Querying Hugging Face API..."
 echo ""
 
-while IFS='|' read -r key family type hf_repo cache_dir dims size_mb license version sha256 is_default onnx_src; do
+while IFS='|' read -r key name family type hf_repo cache_dir dims size_mb license version sha256 is_default onnx_src; do
     check_model "$key" "$hf_repo" "$version"
     # Rate limit: don't hammer HF API
     sleep 0.3

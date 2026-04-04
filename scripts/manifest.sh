@@ -40,6 +40,7 @@ with open('${MANIFEST}', 'rb') as f:
 for key, m in data.get('models', {}).items():
     fields = [
         key,
+        m.get('name', key),
         m.get('family', ''),
         m.get('type', ''),
         m.get('huggingface_repo', ''),
@@ -130,13 +131,18 @@ get_model_keys() {
 }
 
 # Get a specific model field (key, field_index)
-# Fields: 1=key 2=family 3=type 4=hf_repo 5=cache_dir 6=dims 7=size_mb 8=license 9=version 10=sha256 11=default 12=onnx_source
+# Fields: 1=key 2=name 3=family 4=type 5=hf_repo 6=cache_dir 7=dims 8=size_mb 9=license 10=version 11=sha256 12=default 13=onnx_source
 get_model_field() {
     local key="$1" field_num="$2"
     parse_manifest | grep "^${key}|" | cut -d'|' -f"$field_num"
 }
 
 # Get the default model key
-get_default_model() {
+get_default_model_key() {
     parse_manifest | grep '|1|' | head -1 | cut -d'|' -f1
+}
+
+# Get the default model display name
+get_default_model() {
+    parse_manifest | grep '|1|' | head -1 | cut -d'|' -f2
 }

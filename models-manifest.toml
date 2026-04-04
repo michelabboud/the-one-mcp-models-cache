@@ -28,8 +28,8 @@ fastembed_cache_dir = "models--Qdrant--all-MiniLM-L6-v2-onnx"
 dims = 384
 size_mb = 23
 license = "Apache-2.0"
-version = "2025-01"
-sha256 = "d048f977109fe112ba790508f9f5dd09d1d2a4a57a7e635b5167fe1afccc84c9"
+version = "2025-03"
+sha256 = ""
 
 [models.all-MiniLM-L12-v2]
 name = "all-MiniLM-L12-v2"
@@ -42,7 +42,7 @@ fastembed_cache_dir = "models--Qdrant--all-MiniLM-L12-v2-onnx"
 dims = 384
 size_mb = 33
 license = "Apache-2.0"
-version = "2025-01"
+version = "2026-03"
 sha256 = ""
 
 [models.paraphrase-multilingual-MiniLM-L12-v2]
@@ -56,7 +56,7 @@ fastembed_cache_dir = "models--Xenova--paraphrase-multilingual-MiniLM-L12-v2"
 dims = 384
 size_mb = 45
 license = "Apache-2.0"
-version = "2025-01"
+version = "2026-01"
 sha256 = ""
 
 # ── BAAI (BGE) ─────────────────────────────────────────────────────────
@@ -72,8 +72,8 @@ fastembed_cache_dir = "models--Xenova--bge-small-en-v1.5"
 dims = 384
 size_mb = 24
 license = "MIT"
-version = "2025-01"
-sha256 = "d65e76e306afc0afdb99c74e25be253fe3de21c45a6d21ff66a9a26bb25b7acb"
+version = "2024-02"
+sha256 = ""
 
 [models.BGE-base-en-v1_5]
 name = "BGE-base-en-v1.5"
@@ -86,8 +86,8 @@ fastembed_cache_dir = "models--Xenova--bge-base-en-v1.5"
 dims = 768
 size_mb = 50
 license = "MIT"
-version = "2025-01"
-sha256 = "77109616fbf2e8d213622f50711249ca7de974da1e3d2e05bac693ebee0d86ea"
+version = "2024-02"
+sha256 = ""
 
 [models.BGE-large-en-v1_5]
 name = "BGE-large-en-v1.5"
@@ -100,9 +100,9 @@ fastembed_cache_dir = "models--Xenova--bge-large-en-v1.5"
 dims = 1024
 size_mb = 130
 license = "MIT"
-version = "2025-01"
+version = "2024-02"
 default = true
-sha256 = "19939eef1e3de04ac7729fa8c694222063c9e1c7f769b89070a6da85a684853c"
+sha256 = ""
 
 # ── intfloat (Multilingual E5) ─────────────────────────────────────────
 
@@ -117,7 +117,7 @@ fastembed_cache_dir = "models--Xenova--multilingual-e5-small"
 dims = 384
 size_mb = 45
 license = "MIT"
-version = "2025-01"
+version = "2026-04"
 sha256 = ""
 
 [models.multilingual-e5-base]
@@ -131,7 +131,7 @@ fastembed_cache_dir = "models--Xenova--multilingual-e5-base"
 dims = 768
 size_mb = 90
 license = "MIT"
-version = "2025-01"
+version = "2026-04"
 sha256 = ""
 
 [models.multilingual-e5-large]
@@ -145,7 +145,7 @@ fastembed_cache_dir = "models--Xenova--multilingual-e5-large"
 dims = 1024
 size_mb = 220
 license = "MIT"
-version = "2025-01"
+version = "2026-04"
 sha256 = ""
 
 # ── Nomic AI ───────────────────────────────────────────────────────────
@@ -161,7 +161,7 @@ fastembed_cache_dir = "models--nomic-ai--nomic-embed-text-v1"
 dims = 768
 size_mb = 55
 license = "Apache-2.0"
-version = "2025-01"
+version = "2025-03"
 sha256 = ""
 
 [models.nomic-embed-text-v1_5]
@@ -175,7 +175,7 @@ fastembed_cache_dir = "models--nomic-ai--nomic-embed-text-v1.5"
 dims = 768
 size_mb = 55
 license = "Apache-2.0"
-version = "2025-01"
+version = "2025-07"
 sha256 = ""
 
 # ── Mixedbread AI ──────────────────────────────────────────────────────
@@ -191,7 +191,7 @@ fastembed_cache_dir = "models--mixedbread-ai--mxbai-embed-large-v1"
 dims = 1024
 size_mb = 130
 license = "Apache-2.0"
-version = "2025-01"
+version = "2026-01"
 sha256 = ""
 
 # ── Alibaba GTE ────────────────────────────────────────────────────────
@@ -207,7 +207,7 @@ fastembed_cache_dir = "models--Xenova--gte-base-en-v1.5"
 dims = 768
 size_mb = 50
 license = "MIT"
-version = "2025-01"
+version = "2024-11"
 sha256 = ""
 
 [models.gte-large-en-v1_5]
@@ -221,7 +221,7 @@ fastembed_cache_dir = "models--Xenova--gte-large-en-v1.5"
 dims = 1024
 size_mb = 130
 license = "MIT"
-version = "2025-01"
+version = "2024-08"
 sha256 = ""
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -239,7 +239,7 @@ fastembed_cache_dir = "models--Xenova--bge-reranker-base"
 dims = 0
 size_mb = 50
 license = "MIT"
-version = "2025-01"
+version = "2024-06"
 sha256 = ""
 
 [models.BGE-reranker-v2-m3]
@@ -253,7 +253,7 @@ fastembed_cache_dir = "models--Xenova--bge-reranker-v2-m3"
 dims = 0
 size_mb = 130
 license = "MIT"
-version = "2025-01"
+version = "2024-06"
 sha256 = ""
 
 [models.jina-reranker-v1-turbo-en]
@@ -267,7 +267,7 @@ fastembed_cache_dir = "models--jinaai--jina-reranker-v1-turbo-en"
 dims = 0
 size_mb = 50
 license = "Apache-2.0"
-version = "2025-01"
+version = "2025-09"
 sha256 = ""
 
 [models.jina-reranker-v2-base-multilingual]
@@ -281,5 +281,5 @@ fastembed_cache_dir = "models--jinaai--jina-reranker-v2-base-multilingual"
 dims = 0
 size_mb = 110
 license = "Apache-2.0"
-version = "2025-01"
+version = "2025-10"
 sha256 = ""
