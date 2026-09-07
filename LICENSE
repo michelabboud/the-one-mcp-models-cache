@@ -1,0 +1,18 @@
+the-one-mcp-models-cache — Proprietary. All Rights Reserved.
+
+Copyright (c) 2026 Michel Abboud
+
+The repository-original software, scripts, manifests, documentation, and related files
+("Repository Work") are proprietary. No license, express or implied, is granted to use, copy,
+modify, publish, distribute, sublicense, or sell the Repository Work except under a separate
+written agreement signed by the copyright holder.
+
+Third-party models, model weights, ONNX conversions, native runtimes, notices, and license texts
+are excluded from the Repository Work. They remain governed solely by their respective upstream
+licenses and terms. Nothing in this notice expands, replaces, or restricts those upstream terms.
+
+THE REPOSITORY WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF, OR IN CONNECTION WITH THE REPOSITORY WORK OR ITS USE.
