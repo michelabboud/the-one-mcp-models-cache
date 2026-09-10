@@ -1,0 +1,11 @@
+{
+  "include": [
+    "scripts/*.py",
+    "tests",
+    "runtime/tests"
+  ],
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "standard",
+  "reportImplicitStringConcatenation": "error",
+  "reportUnusedCallResult": "none"
+}

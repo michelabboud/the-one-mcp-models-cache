@@ -1,0 +1,105 @@
+# Native runtime artifacts are intentionally separate from models-manifest.toml.
+# The four [[archives]] rows are the intended v6.0.2 binary payload set. Their SHA-256
+# values are the original compressed-byte hashes embedded in ort-sys 2.0.0-rc.13.
+
+[meta]
+schema_version = 1
+component = "onnxruntime-native-static"
+release_repo = "michelabboud/the-one-mcp-models-cache"
+release_tag = "v6.0.2"
+ort_sys_version = "2.0.0-rc.13"
+ort_sys_source_commit = "002f41a8e175eac7f6695ff361d2e51a50874c48"
+ort_sys_dist_table_url = "https://github.com/pykeio/ort/blob/002f41a8e175eac7f6695ff361d2e51a50874c48/ort-sys/build/download/dist.tsv"
+ort_sys_dist_table_sha256 = "c706a8bf67367fbec3ad7851d9b119f8830fbabe53696e20f4740131f7f59e78"
+onnxruntime_version = "1.28.0"
+onnxruntime_release_url = "https://github.com/microsoft/onnxruntime/releases/tag/v1.28.0"
+onnxruntime_license = "MIT"
+onnxruntime_license_url = "https://github.com/microsoft/onnxruntime/blob/v1.28.0/LICENSE"
+archive_format = "tar+raw-lzma2"
+lzma2_dictionary_bytes = 67108864
+cache_path_template = "${ORT_CACHE_DIR}/dfbin/{target}/{sha256}/"
+
+[[archives]]
+target = "x86_64-unknown-linux-gnu"
+platform = "Linux x86_64"
+feature_set = "none"
+execution_provider = "CPU"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/x86_64-unknown-linux-gnu.tar.lzma2"
+source_archive = "x86_64-unknown-linux-gnu.tar.lzma2"
+release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-x86_64-unknown-linux-gnu.tar.lzma2"
+sha256 = "e454f710f8a49f53aa5b4ff51e3454ae1835777e431c6c35c5255ce6f205fd68"
+expected_library = "libonnxruntime.a"
+cache_path = "${ORT_CACHE_DIR}/dfbin/x86_64-unknown-linux-gnu/e454f710f8a49f53aa5b4ff51e3454ae1835777e431c6c35c5255ce6f205fd68/"
+
+[[archives]]
+target = "aarch64-unknown-linux-gnu"
+platform = "Linux aarch64"
+feature_set = "none"
+execution_provider = "CPU"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/aarch64-unknown-linux-gnu.tar.lzma2"
+source_archive = "aarch64-unknown-linux-gnu.tar.lzma2"
+release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-aarch64-unknown-linux-gnu.tar.lzma2"
+sha256 = "06a050ab9137ccb32421d0cb49e9ccf72d9e18ab0aeb8f8d038d1b5cc844b35a"
+expected_library = "libonnxruntime.a"
+cache_path = "${ORT_CACHE_DIR}/dfbin/aarch64-unknown-linux-gnu/06a050ab9137ccb32421d0cb49e9ccf72d9e18ab0aeb8f8d038d1b5cc844b35a/"
+
+[[archives]]
+target = "aarch64-apple-darwin"
+platform = "macOS Apple Silicon"
+feature_set = "coreml"
+execution_provider = "CoreML"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/aarch64-apple-darwin+coreml.tar.lzma2"
+source_archive = "aarch64-apple-darwin+coreml.tar.lzma2"
+release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-aarch64-apple-darwin+coreml.tar.lzma2"
+sha256 = "6934874e2e953576d9c1db47ff1af39c62c4f4220dbe6f988e131f72879674c7"
+expected_library = "libonnxruntime.a"
+cache_path = "${ORT_CACHE_DIR}/dfbin/aarch64-apple-darwin/6934874e2e953576d9c1db47ff1af39c62c4f4220dbe6f988e131f72879674c7/"
+
+[[archives]]
+target = "x86_64-pc-windows-msvc"
+platform = "Windows x86_64"
+feature_set = "directml"
+execution_provider = "DirectML"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/x86_64-pc-windows-msvc+directml.tar.lzma2"
+source_archive = "x86_64-pc-windows-msvc+directml.tar.lzma2"
+release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-x86_64-pc-windows-msvc+directml.tar.lzma2"
+sha256 = "f7c654b3729cb9e5ad2a36a0c38e5b48e63bf4eed22968931aed33a0ad0b527d"
+expected_library = "onnxruntime.lib"
+cache_path = "${ORT_CACHE_DIR}/dfbin/x86_64-pc-windows-msvc/f7c654b3729cb9e5ad2a36a0c38e5b48e63bf4eed22968931aed33a0ad0b527d/"
+
+# Authoritative in the same ort-sys dist.tsv, but intentionally not part of
+# the intended four-platform binary payload set because The-One currently builds this target with
+# local embeddings disabled and there is no native Windows aarch64 qualification host.
+[[future_archives]]
+target = "aarch64-pc-windows-msvc"
+platform = "Windows aarch64"
+feature_set = "directml"
+execution_provider = "DirectML"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/aarch64-pc-windows-msvc+directml.tar.lzma2"
+source_archive = "aarch64-pc-windows-msvc+directml.tar.lzma2"
+proposed_release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-aarch64-pc-windows-msvc+directml.tar.lzma2"
+sha256 = "56df72970baeea08295db33f15f985cd74f4d4cd00e0099c44aba1504c5d140e"
+expected_library = "onnxruntime.lib"
+cache_path = "${ORT_CACHE_DIR}/dfbin/aarch64-pc-windows-msvc/56df72970baeea08295db33f15f985cd74f4d4cd00e0099c44aba1504c5d140e/"
+reason = "The-One currently builds aarch64-pc-windows-msvc with local embeddings disabled, and no native Windows aarch64 host qualification is available."
+
+# Published by Pyke and relevant to AMD-capable WebGPU environments, but the-one-mcp does not
+# enable ort-sys's webgpu feature today. This is provenance only, not an intended v6.0.2 binary
+# payload dependency.
+[[optional_archives]]
+target = "x86_64-unknown-linux-gnu"
+platform = "Linux x86_64"
+feature_set = "webgpu"
+execution_provider = "WebGPU"
+source_url = "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/x86_64-unknown-linux-gnu+webgpu.tar.lzma2"
+source_archive = "x86_64-unknown-linux-gnu+webgpu.tar.lzma2"
+proposed_release_asset = "onnxruntime-1.28.0-ort-sys-2.0.0-rc.13-x86_64-unknown-linux-gnu+webgpu.tar.lzma2"
+sha256 = "68406bc32de516ee8baeaa4c5f2de2bb0031269f19ce8b76d64988c0498b93be"
+expected_library = "libonnxruntime.a"
+cache_path = "${ORT_CACHE_DIR}/dfbin/x86_64-unknown-linux-gnu/68406bc32de516ee8baeaa4c5f2de2bb0031269f19ce8b76d64988c0498b93be/"
+reason = "the-one-mcp does not currently enable ort-sys's webgpu feature."
+
+[[unavailable_targets]]
+target = "x86_64-apple-darwin"
+platform = "macOS Intel"
+reason = "ort-sys 2.0.0-rc.13 dist.tsv contains no Pyke artifact for this target."

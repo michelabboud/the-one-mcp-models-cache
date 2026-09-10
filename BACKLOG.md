@@ -6,9 +6,14 @@
   extraction. Descriptor-anchored ORT publication and complete runtime-schema/framing validation
   close earlier review findings. The newest security repair adds publish-time substitution/original
   preservation, raw PAX/GNU and negative-size prevalidation, exact rc13-tuple admission, and
-  16 MiB manifest/1 GiB runtime-payload bounds. Implementers report a 135/135 local test run for
-  the current candidate; it is not root-owned evidence. The root full-gate rerun and final
-  independent re-review remain.
+  16 MiB manifest/1 GiB runtime-payload bounds. The latest repair additionally makes installed
+  model/runtime trees durable before success and bounds model-source snapshot admission before and
+  during copy. Runtime final-output inventory is incremental and rejects the first extra entry;
+  retained runtime/model staging is no longer recursively inventoried when identity-safe deletion
+  is unavailable. Reviewed release admission now uses direct context-managed `os.scandir()` rather
+  than eager `Path.iterdir()`/`os.listdir()`, with exact and invalid inventory regressions. The
+  complete local gate passed 162 central and 47 runtime tests (209 total); final independent
+  re-review remains.
 - 2026-09-08 — v6 publication notices — **High**, `blocked`: recover and audit exact per-model
   cache/original license, copyright, and notice materials plus ONNX Runtime 1.28.0
   `ThirdPartyNotices.txt`. Define and independently review a notice-delivery mechanism that

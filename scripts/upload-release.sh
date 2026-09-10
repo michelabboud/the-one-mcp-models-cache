@@ -2,4 +2,4 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-exec python3 "${SCRIPT_DIR}/model_cache.py" check-updates "$@"
+exec python3 "${SCRIPT_DIR}/model_cache.py" upload "$@"

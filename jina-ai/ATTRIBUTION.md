@@ -1,4 +1,4 @@
-# Jina AI Models (Rerankers)
+# Jina AI Models
 
 ## Models
 
@@ -6,10 +6,13 @@
 |-------|------|-------------|-------------|
 | jina-reranker-v1-turbo-en | Reranker | No (English) | [jinaai/jina-reranker-v1-turbo-en](https://huggingface.co/jinaai/jina-reranker-v1-turbo-en) |
 | jina-reranker-v2-base-multilingual | Reranker | Yes (100+ languages) | [jinaai/jina-reranker-v2-base-multilingual](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) |
+| jina-embeddings-v2-base-code | Embedding | Code + English | [jinaai/jina-embeddings-v2-base-code](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) |
+| jina-embeddings-v2-base-en | Embedding | English | [jinaai/jina-embeddings-v2-base-en](https://huggingface.co/jinaai/jina-embeddings-v2-base-en) |
 
-## License
+## Original-model and cache-repository license
 
-Apache License 2.0
+The original models and the exact Jina cache repositories selected by FastEmbed declare Apache
+License 2.0. Both provenance layers are recorded explicitly in `models-manifest.toml`.
 
 ## Authors
 
@@ -30,5 +33,5 @@ Jina AI — [jina.ai](https://jina.ai/)
 
 ## Original Source
 
-All models originally published at [huggingface.co/jinaai](https://huggingface.co/jinaai).
-ONNX versions produced by [fastembed-rs](https://github.com/Anush008/fastembed-rs).
+All cache repositories are published at [huggingface.co/jinaai](https://huggingface.co/jinaai).
+The exact ONNX paths consumed by FastEmbed 6.0.2 are recorded in `models-manifest.toml`.

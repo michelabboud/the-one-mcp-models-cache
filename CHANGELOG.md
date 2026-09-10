@@ -3,7 +3,7 @@
 All notable changes to the repository metadata and tooling are recorded here.
 Third-party model and runtime versions are recorded separately in their manifests.
 
-## [Unreleased]
+## [6.0.3] - 2026-09-10
 
 ### Changed
 
@@ -17,6 +17,13 @@ Third-party model and runtime versions are recorded separately in their manifest
 - Defined one exact tooling-validated binary payload set of 43 assets: 39 model archives and four
   required target-specific ONNX Runtime archives. This count does not by itself define the final
   publishable-release inventory.
+- Made GitHub asset acquisition stream through a descriptor-relative exclusive staging leaf, with
+  the signed expected size and absolute archive cap enforced during transfer. Release preflight now
+  bounds admission to the exact 43-file payload inventory and rejects the first unexpected,
+  duplicate, or over-count entry.
+- Replaced the reviewed-artifact scan's `Path.iterdir()`/`os.listdir()` materialization with a
+  context-managed `os.scandir()` iterator. Exact inventory succeeds without eager listing, while
+  unexpected, duplicate, and over-count entries stop admission immediately and close the scanner.
 - Tightened release verification to `VERSION`, the exact configured origin, the checked-out local
   branch named `main` and tracking exactly `refs/remotes/origin/main`, a clean whole working tree
   including untracked files, a full 40-character `HEAD` equal to pushed `origin/main`, and the
@@ -78,14 +85,41 @@ Third-party model and runtime versions are recorded separately in their manifest
   of 21 download/16 provenance/2 refresh, six empty provenance maps per unresolved group, and the
   sole Rozgo `NOASSERTION`. Manifest/script modes remain preserved, and the root follow-up scan
   found no generated Python, Ruff, or pytest cache residue.
+- Model and runtime installation now flush every published output file and directory, both sides of
+  the atomic directory rename, and the held cache ancestry before reporting success. A
+  postpublication validation or sync failure is classified as durability-unknown and preserves the
+  visible output and private recovery material. Model preparation now rejects initially oversized
+  per-member or cumulative source inventories before staging and enforces the same bounds during
+  copy growth.
+- Bound model preparation inventory to 8,192 incrementally scanned entries and 32 relative path
+  components, with immediate unexpected-entry rejection. Source/staging/archive descriptors now
+  stay held through metadata, copying, archive construction, and completed-archive validation, so
+  pathname substitution cannot authorize bytes after admission.
+- Bound every extracted model and runtime leaf to evidence captured by rereading the actual output:
+  its digest, filesystem identity, size, and mutable state. Both installers reject replacement,
+  in-place rewrite, missing content, and unexpected final inventory before the no-clobber rename,
+  then reopen and rehash the exact published tree before accepting durability.
+- Moved publication tracking into each atomic no-clobber helper immediately after a successful
+  rename syscall. Any later helper, validation, synchronization, descriptor-close, or nested or
+  outer context-exit failure is now durability-unknown, with visible output and private recovery
+  material preserved for reconciliation.
+- Bound an atomic manifest candidate to the exact prospective SHA-256 and stable descriptor-backed
+  mutable state through exchange, rejecting equal-size same-inode rewrites before acceptance. Added
+  archive link/rename and manifest replacement commit tracking so post-commit identity, context,
+  cleanup, rollback, and advisory-lock exit failures remain durability-unknown and retain reported
+  recovery output.
+- Made exact runtime output validation incremental: it accepts only one expected root library and
+  rejects the first unexpected or additional entry without materializing the remaining inventory.
+  Runtime and model recovery staging is now retained after its root identity check without
+  recursively enumerating attacker-controlled contents that cannot be conditionally deleted.
 
 ### Checkpoint and release state
 
-- Version 6.0.2 is reserved for the governance-only checkpoint and does not accept the dirty
-  source/tooling candidate. Task 3 must recompute the source checkpoint version after the required
-  source-acceptance sequence; 6.0.3 is expected but unassigned. The historical `fastembed-v4`
-  model-asset release remains published. No v6 source checkpoint, v6 artifact tag, or GitHub
-  Release is claimed by this governance correction.
+- Version 6.0.2 remains the governance-only checkpoint. This source/tooling checkpoint is tagged
+  `checkpoint/6.0.3` after the root gate, isolated Linux ORT probe, candidate freeze, and fresh
+  independent specification/quality and deep security/architecture approval. The historical
+  `fastembed-v4` model-asset release remains published. This is not a `v6.0.2` artifact tag or
+  GitHub Release.
 
 ## [6.0.1] - 2026-09-08
 

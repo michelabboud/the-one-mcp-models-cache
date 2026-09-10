@@ -28,4 +28,5 @@ Mixedbread AI — [mixedbread.ai](https://www.mixedbread.ai/)
 ## Original Source
 
 Model originally published at [huggingface.co/mixedbread-ai](https://huggingface.co/mixedbread-ai).
-ONNX version produced by [fastembed-rs](https://github.com/Anush008/fastembed-rs).
+The exact ONNX repository and paths recorded in `models-manifest.toml` are selected and consumed by
+FastEmbed 6.0.2; this repository does not assert who produced that export.

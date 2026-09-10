@@ -1,0 +1,441 @@
+# Audited FastEmbed registry fixture; deliberately checked into this repository.
+# Source: crates.io fastembed 6.0.2 source files listed below. Regenerate only after an
+# independent source audit; tests never read a sibling the-one-mcp checkout.
+
+[meta]
+fastembed_version = "6.0.2"
+audited_on = "2026-09-08"
+variant_count = 48
+text_embedding_sha256 = "3a76f873dbd09b970787d8623ddeec77c0bfdbea859a210d0622920062fa5ae9"
+reranking_sha256 = "a76d5c86129e5c21860273bd99812ca84de2a3600c449175fa213a4a49e06366"
+image_embedding_sha256 = "2bf7cef65f42d0b541e0f351107cc2484441535e1f5bf50ee486938572d736db"
+sparse_sha256 = "96fe567ac5d823c439d68d8da948a535423a571b9cd4bb7724ada616f34773b9"
+
+[[models]]
+key = "all-MiniLM-L6-v2"
+huggingface_repo = "Qdrant/all-MiniLM-L6-v2-onnx"
+fastembed_cache_dir = "models--Qdrant--all-MiniLM-L6-v2-onnx"
+fastembed_variants = ["EmbeddingModel::AllMiniLML6V2"]
+variant_dims = { "EmbeddingModel::AllMiniLML6V2" = 384 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "all-MiniLM-L6-v2-Q"
+huggingface_repo = "Xenova/all-MiniLM-L6-v2"
+fastembed_cache_dir = "models--Xenova--all-MiniLM-L6-v2"
+fastembed_variants = ["EmbeddingModel::AllMiniLML6V2Q"]
+variant_dims = { "EmbeddingModel::AllMiniLML6V2Q" = 384 }
+model_files = ["onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "all-MiniLM-L12-v2"
+huggingface_repo = "Xenova/all-MiniLM-L12-v2"
+fastembed_cache_dir = "models--Xenova--all-MiniLM-L12-v2"
+fastembed_variants = ["EmbeddingModel::AllMiniLML12V2", "EmbeddingModel::AllMiniLML12V2Q"]
+variant_dims = { "EmbeddingModel::AllMiniLML12V2" = 384, "EmbeddingModel::AllMiniLML12V2Q" = 384 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "all-mpnet-base-v2"
+huggingface_repo = "Xenova/all-mpnet-base-v2"
+fastembed_cache_dir = "models--Xenova--all-mpnet-base-v2"
+fastembed_variants = ["EmbeddingModel::AllMpnetBaseV2"]
+variant_dims = { "EmbeddingModel::AllMpnetBaseV2" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "paraphrase-multilingual-MiniLM-L12-v2"
+huggingface_repo = "Xenova/paraphrase-multilingual-MiniLM-L12-v2"
+fastembed_cache_dir = "models--Xenova--paraphrase-multilingual-MiniLM-L12-v2"
+fastembed_variants = ["EmbeddingModel::ParaphraseMLMiniLML12V2"]
+variant_dims = { "EmbeddingModel::ParaphraseMLMiniLML12V2" = 384 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "paraphrase-multilingual-MiniLM-L12-v2-Q"
+huggingface_repo = "Qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q"
+fastembed_cache_dir = "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q"
+fastembed_variants = ["EmbeddingModel::ParaphraseMLMiniLML12V2Q"]
+variant_dims = { "EmbeddingModel::ParaphraseMLMiniLML12V2Q" = 384 }
+model_files = ["model_optimized.onnx"]
+additional_files = []
+required_files = ["model_optimized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "paraphrase-multilingual-mpnet-base-v2"
+huggingface_repo = "Xenova/paraphrase-multilingual-mpnet-base-v2"
+fastembed_cache_dir = "models--Xenova--paraphrase-multilingual-mpnet-base-v2"
+fastembed_variants = ["EmbeddingModel::ParaphraseMLMpnetBaseV2"]
+variant_dims = { "EmbeddingModel::ParaphraseMLMpnetBaseV2" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-small-en-v1_5"
+huggingface_repo = "Xenova/bge-small-en-v1.5"
+fastembed_cache_dir = "models--Xenova--bge-small-en-v1.5"
+fastembed_variants = ["EmbeddingModel::BGESmallENV15"]
+variant_dims = { "EmbeddingModel::BGESmallENV15" = 384 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-small-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-small-en-v1.5-onnx-Q"
+fastembed_cache_dir = "models--Qdrant--bge-small-en-v1.5-onnx-Q"
+fastembed_variants = ["EmbeddingModel::BGESmallENV15Q"]
+variant_dims = { "EmbeddingModel::BGESmallENV15Q" = 384 }
+model_files = ["model_optimized.onnx"]
+additional_files = []
+required_files = ["model_optimized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-base-en-v1_5"
+huggingface_repo = "Xenova/bge-base-en-v1.5"
+fastembed_cache_dir = "models--Xenova--bge-base-en-v1.5"
+fastembed_variants = ["EmbeddingModel::BGEBaseENV15"]
+variant_dims = { "EmbeddingModel::BGEBaseENV15" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-base-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-base-en-v1.5-onnx-Q"
+fastembed_cache_dir = "models--Qdrant--bge-base-en-v1.5-onnx-Q"
+fastembed_variants = ["EmbeddingModel::BGEBaseENV15Q"]
+variant_dims = { "EmbeddingModel::BGEBaseENV15Q" = 768 }
+model_files = ["model_optimized.onnx"]
+additional_files = []
+required_files = ["model_optimized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-large-en-v1_5"
+huggingface_repo = "Xenova/bge-large-en-v1.5"
+fastembed_cache_dir = "models--Xenova--bge-large-en-v1.5"
+fastembed_variants = ["EmbeddingModel::BGELargeENV15"]
+variant_dims = { "EmbeddingModel::BGELargeENV15" = 1024 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = ["embedding"]
+
+[[models]]
+key = "BGE-large-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-large-en-v1.5-onnx-Q"
+fastembed_cache_dir = "models--Qdrant--bge-large-en-v1.5-onnx-Q"
+fastembed_variants = ["EmbeddingModel::BGELargeENV15Q"]
+variant_dims = { "EmbeddingModel::BGELargeENV15Q" = 1024 }
+model_files = ["model_optimized.onnx"]
+additional_files = []
+required_files = ["model_optimized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-small-zh-v1_5"
+huggingface_repo = "Xenova/bge-small-zh-v1.5"
+fastembed_cache_dir = "models--Xenova--bge-small-zh-v1.5"
+fastembed_variants = ["EmbeddingModel::BGESmallZHV15"]
+variant_dims = { "EmbeddingModel::BGESmallZHV15" = 512 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-large-zh-v1_5"
+huggingface_repo = "Xenova/bge-large-zh-v1.5"
+fastembed_cache_dir = "models--Xenova--bge-large-zh-v1.5"
+fastembed_variants = ["EmbeddingModel::BGELargeZHV15"]
+variant_dims = { "EmbeddingModel::BGELargeZHV15" = 1024 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-M3"
+huggingface_repo = "BAAI/bge-m3"
+fastembed_cache_dir = "models--BAAI--bge-m3"
+fastembed_variants = ["EmbeddingModel::BGEM3", "SparseModel::BGEM3"]
+variant_dims = { "EmbeddingModel::BGEM3" = 1024, "SparseModel::BGEM3" = 0 }
+model_files = ["onnx/model.onnx"]
+additional_files = ["onnx/model.onnx_data", "onnx/Constant_7_attr__value"]
+required_files = ["onnx/model.onnx", "onnx/model.onnx_data", "onnx/Constant_7_attr__value", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "multilingual-e5-small"
+huggingface_repo = "intfloat/multilingual-e5-small"
+fastembed_cache_dir = "models--intfloat--multilingual-e5-small"
+fastembed_variants = ["EmbeddingModel::MultilingualE5Small"]
+variant_dims = { "EmbeddingModel::MultilingualE5Small" = 384 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "multilingual-e5-base"
+huggingface_repo = "intfloat/multilingual-e5-base"
+fastembed_cache_dir = "models--intfloat--multilingual-e5-base"
+fastembed_variants = ["EmbeddingModel::MultilingualE5Base"]
+variant_dims = { "EmbeddingModel::MultilingualE5Base" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "multilingual-e5-large"
+huggingface_repo = "Qdrant/multilingual-e5-large-onnx"
+fastembed_cache_dir = "models--Qdrant--multilingual-e5-large-onnx"
+fastembed_variants = ["EmbeddingModel::MultilingualE5Large"]
+variant_dims = { "EmbeddingModel::MultilingualE5Large" = 1024 }
+model_files = ["model.onnx"]
+additional_files = ["model.onnx_data"]
+required_files = ["model.onnx", "model.onnx_data", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "nomic-embed-text-v1"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1"
+fastembed_cache_dir = "models--nomic-ai--nomic-embed-text-v1"
+fastembed_variants = ["EmbeddingModel::NomicEmbedTextV1"]
+variant_dims = { "EmbeddingModel::NomicEmbedTextV1" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "nomic-embed-text-v1_5"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1.5"
+fastembed_cache_dir = "models--nomic-ai--nomic-embed-text-v1.5"
+fastembed_variants = ["EmbeddingModel::NomicEmbedTextV15", "EmbeddingModel::NomicEmbedTextV15Q"]
+variant_dims = { "EmbeddingModel::NomicEmbedTextV15" = 768, "EmbeddingModel::NomicEmbedTextV15Q" = 768 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "mxbai-embed-large-v1"
+huggingface_repo = "mixedbread-ai/mxbai-embed-large-v1"
+fastembed_cache_dir = "models--mixedbread-ai--mxbai-embed-large-v1"
+fastembed_variants = ["EmbeddingModel::MxbaiEmbedLargeV1", "EmbeddingModel::MxbaiEmbedLargeV1Q"]
+variant_dims = { "EmbeddingModel::MxbaiEmbedLargeV1" = 1024, "EmbeddingModel::MxbaiEmbedLargeV1Q" = 1024 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "gte-base-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-base-en-v1.5"
+fastembed_cache_dir = "models--Alibaba-NLP--gte-base-en-v1.5"
+fastembed_variants = ["EmbeddingModel::GTEBaseENV15", "EmbeddingModel::GTEBaseENV15Q"]
+variant_dims = { "EmbeddingModel::GTEBaseENV15" = 768, "EmbeddingModel::GTEBaseENV15Q" = 768 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "gte-large-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-large-en-v1.5"
+fastembed_cache_dir = "models--Alibaba-NLP--gte-large-en-v1.5"
+fastembed_variants = ["EmbeddingModel::GTELargeENV15", "EmbeddingModel::GTELargeENV15Q"]
+variant_dims = { "EmbeddingModel::GTELargeENV15" = 1024, "EmbeddingModel::GTELargeENV15Q" = 1024 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "ModernBERT-embed-large"
+huggingface_repo = "lightonai/modernbert-embed-large"
+fastembed_cache_dir = "models--lightonai--modernbert-embed-large"
+fastembed_variants = ["EmbeddingModel::ModernBertEmbedLarge"]
+variant_dims = { "EmbeddingModel::ModernBertEmbedLarge" = 1024 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "jina-embeddings-v2-base-code"
+huggingface_repo = "jinaai/jina-embeddings-v2-base-code"
+fastembed_cache_dir = "models--jinaai--jina-embeddings-v2-base-code"
+fastembed_variants = ["EmbeddingModel::JinaEmbeddingsV2BaseCode"]
+variant_dims = { "EmbeddingModel::JinaEmbeddingsV2BaseCode" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "jina-embeddings-v2-base-en"
+huggingface_repo = "jinaai/jina-embeddings-v2-base-en"
+fastembed_cache_dir = "models--jinaai--jina-embeddings-v2-base-en"
+fastembed_variants = ["EmbeddingModel::JinaEmbeddingsV2BaseEN"]
+variant_dims = { "EmbeddingModel::JinaEmbeddingsV2BaseEN" = 768 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "embeddinggemma-300m"
+huggingface_repo = "onnx-community/embeddinggemma-300m-ONNX"
+fastembed_cache_dir = "models--onnx-community--embeddinggemma-300m-ONNX"
+fastembed_variants = ["EmbeddingModel::EmbeddingGemma300M", "EmbeddingModel::EmbeddingGemma300MQ4", "EmbeddingModel::EmbeddingGemma300MQ"]
+variant_dims = { "EmbeddingModel::EmbeddingGemma300M" = 768, "EmbeddingModel::EmbeddingGemma300MQ4" = 768, "EmbeddingModel::EmbeddingGemma300MQ" = 768 }
+model_files = ["onnx/model.onnx", "onnx/model_q4.onnx", "onnx/model_quantized.onnx"]
+additional_files = ["onnx/model.onnx_data", "onnx/model_q4.onnx_data", "onnx/model_quantized.onnx_data"]
+required_files = ["onnx/model.onnx", "onnx/model.onnx_data", "onnx/model_q4.onnx", "onnx/model_q4.onnx_data", "onnx/model_quantized.onnx", "onnx/model_quantized.onnx_data", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "snowflake-arctic-embed-m"
+huggingface_repo = "Snowflake/snowflake-arctic-embed-m"
+fastembed_cache_dir = "models--Snowflake--snowflake-arctic-embed-m"
+fastembed_variants = ["EmbeddingModel::SnowflakeArcticEmbedM", "EmbeddingModel::SnowflakeArcticEmbedMQ"]
+variant_dims = { "EmbeddingModel::SnowflakeArcticEmbedM" = 768, "EmbeddingModel::SnowflakeArcticEmbedMQ" = 768 }
+model_files = ["onnx/model.onnx", "onnx/model_quantized.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "onnx/model_quantized.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-reranker-base"
+huggingface_repo = "BAAI/bge-reranker-base"
+fastembed_cache_dir = "models--BAAI--bge-reranker-base"
+fastembed_variants = ["RerankerModel::BGERerankerBase"]
+variant_dims = { "RerankerModel::BGERerankerBase" = 0 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "BGE-reranker-v2-m3"
+huggingface_repo = "rozgo/bge-reranker-v2-m3"
+fastembed_cache_dir = "models--rozgo--bge-reranker-v2-m3"
+fastembed_variants = ["RerankerModel::BGERerankerV2M3"]
+variant_dims = { "RerankerModel::BGERerankerV2M3" = 0 }
+model_files = ["model.onnx"]
+additional_files = ["model.onnx.data"]
+required_files = ["model.onnx", "model.onnx.data", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "jina-reranker-v1-turbo-en"
+huggingface_repo = "jinaai/jina-reranker-v1-turbo-en"
+fastembed_cache_dir = "models--jinaai--jina-reranker-v1-turbo-en"
+fastembed_variants = ["RerankerModel::JINARerankerV1TurboEn"]
+variant_dims = { "RerankerModel::JINARerankerV1TurboEn" = 0 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = []
+
+[[models]]
+key = "jina-reranker-v2-base-multilingual"
+huggingface_repo = "jinaai/jina-reranker-v2-base-multilingual"
+fastembed_cache_dir = "models--jinaai--jina-reranker-v2-base-multilingual"
+fastembed_variants = ["RerankerModel::JINARerankerV2BaseMultiligual"]
+variant_dims = { "RerankerModel::JINARerankerV2BaseMultiligual" = 0 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = ["reranker"]
+
+[[models]]
+key = "nomic-embed-vision-v1_5"
+huggingface_repo = "nomic-ai/nomic-embed-vision-v1.5"
+fastembed_cache_dir = "models--nomic-ai--nomic-embed-vision-v1.5"
+fastembed_variants = ["ImageEmbeddingModel::NomicEmbedVisionV15"]
+variant_dims = { "ImageEmbeddingModel::NomicEmbedVisionV15" = 768 }
+model_files = ["onnx/model.onnx"]
+additional_files = []
+required_files = ["onnx/model.onnx", "preprocessor_config.json"]
+default_for = ["image"]
+
+[[models]]
+key = "clip-ViT-B-32-vision"
+huggingface_repo = "Qdrant/clip-ViT-B-32-vision"
+fastembed_cache_dir = "models--Qdrant--clip-ViT-B-32-vision"
+fastembed_variants = ["ImageEmbeddingModel::ClipVitB32"]
+variant_dims = { "ImageEmbeddingModel::ClipVitB32" = 512 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "preprocessor_config.json"]
+default_for = []
+
+[[models]]
+key = "resnet50-onnx"
+huggingface_repo = "Qdrant/resnet50-onnx"
+fastembed_cache_dir = "models--Qdrant--resnet50-onnx"
+fastembed_variants = ["ImageEmbeddingModel::Resnet50"]
+variant_dims = { "ImageEmbeddingModel::Resnet50" = 2048 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "preprocessor_config.json"]
+default_for = []
+
+[[models]]
+key = "Unicom-ViT-B-16"
+huggingface_repo = "Qdrant/Unicom-ViT-B-16"
+fastembed_cache_dir = "models--Qdrant--Unicom-ViT-B-16"
+fastembed_variants = ["ImageEmbeddingModel::UnicomVitB16"]
+variant_dims = { "ImageEmbeddingModel::UnicomVitB16" = 768 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "preprocessor_config.json"]
+default_for = []
+
+[[models]]
+key = "Unicom-ViT-B-32"
+huggingface_repo = "Qdrant/Unicom-ViT-B-32"
+fastembed_cache_dir = "models--Qdrant--Unicom-ViT-B-32"
+fastembed_variants = ["ImageEmbeddingModel::UnicomVitB32"]
+variant_dims = { "ImageEmbeddingModel::UnicomVitB32" = 512 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "preprocessor_config.json"]
+default_for = []
+
+[[models]]
+key = "Splade_PP_en_v1"
+huggingface_repo = "Qdrant/Splade_PP_en_v1"
+fastembed_cache_dir = "models--Qdrant--Splade_PP_en_v1"
+fastembed_variants = ["SparseModel::SPLADEPPV1"]
+variant_dims = { "SparseModel::SPLADEPPV1" = 0 }
+model_files = ["model.onnx"]
+additional_files = []
+required_files = ["model.onnx", "tokenizer.json", "config.json", "special_tokens_map.json", "tokenizer_config.json"]
+default_for = ["sparse"]

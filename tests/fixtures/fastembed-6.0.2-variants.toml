@@ -1,0 +1,395 @@
+# Per-variant registry metadata audited from the crates.io FastEmbed 6.0.2 source.
+# This immutable fixture binds each represented enum variant to its repository, model file,
+# additional files, and output dimensions without reading another project checkout.
+
+[meta]
+fastembed_version = "6.0.2"
+audited_on = "2026-09-08"
+variant_count = 48
+text_embedding_sha256 = "3a76f873dbd09b970787d8623ddeec77c0bfdbea859a210d0622920062fa5ae9"
+reranking_sha256 = "a76d5c86129e5c21860273bd99812ca84de2a3600c449175fa213a4a49e06366"
+image_embedding_sha256 = "2bf7cef65f42d0b541e0f351107cc2484441535e1f5bf50ee486938572d736db"
+sparse_sha256 = "96fe567ac5d823c439d68d8da948a535423a571b9cd4bb7724ada616f34773b9"
+
+[[variants]]
+name = "EmbeddingModel::AllMiniLML6V2"
+cache_key = "all-MiniLM-L6-v2"
+huggingface_repo = "Qdrant/all-MiniLM-L6-v2-onnx"
+dim = 384
+model_file = "model.onnx"
+additional_files = []
+[[variants]]
+name = "EmbeddingModel::AllMiniLML6V2Q"
+cache_key = "all-MiniLM-L6-v2-Q"
+huggingface_repo = "Xenova/all-MiniLM-L6-v2"
+dim = 384
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::AllMiniLML12V2"
+cache_key = "all-MiniLM-L12-v2"
+huggingface_repo = "Xenova/all-MiniLM-L12-v2"
+dim = 384
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::AllMiniLML12V2Q"
+cache_key = "all-MiniLM-L12-v2"
+huggingface_repo = "Xenova/all-MiniLM-L12-v2"
+dim = 384
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::AllMpnetBaseV2"
+cache_key = "all-mpnet-base-v2"
+huggingface_repo = "Xenova/all-mpnet-base-v2"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::ParaphraseMLMiniLML12V2"
+cache_key = "paraphrase-multilingual-MiniLM-L12-v2"
+huggingface_repo = "Xenova/paraphrase-multilingual-MiniLM-L12-v2"
+dim = 384
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::ParaphraseMLMiniLML12V2Q"
+cache_key = "paraphrase-multilingual-MiniLM-L12-v2-Q"
+huggingface_repo = "Qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q"
+dim = 384
+model_file = "model_optimized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::ParaphraseMLMpnetBaseV2"
+cache_key = "paraphrase-multilingual-mpnet-base-v2"
+huggingface_repo = "Xenova/paraphrase-multilingual-mpnet-base-v2"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGESmallENV15"
+cache_key = "BGE-small-en-v1_5"
+huggingface_repo = "Xenova/bge-small-en-v1.5"
+dim = 384
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGESmallENV15Q"
+cache_key = "BGE-small-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-small-en-v1.5-onnx-Q"
+dim = 384
+model_file = "model_optimized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGEBaseENV15"
+cache_key = "BGE-base-en-v1_5"
+huggingface_repo = "Xenova/bge-base-en-v1.5"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGEBaseENV15Q"
+cache_key = "BGE-base-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-base-en-v1.5-onnx-Q"
+dim = 768
+model_file = "model_optimized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGELargeENV15"
+cache_key = "BGE-large-en-v1_5"
+huggingface_repo = "Xenova/bge-large-en-v1.5"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGELargeENV15Q"
+cache_key = "BGE-large-en-v1_5-Q"
+huggingface_repo = "Qdrant/bge-large-en-v1.5-onnx-Q"
+dim = 1024
+model_file = "model_optimized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGESmallZHV15"
+cache_key = "BGE-small-zh-v1_5"
+huggingface_repo = "Xenova/bge-small-zh-v1.5"
+dim = 512
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGELargeZHV15"
+cache_key = "BGE-large-zh-v1_5"
+huggingface_repo = "Xenova/bge-large-zh-v1.5"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::BGEM3"
+cache_key = "BGE-M3"
+huggingface_repo = "BAAI/bge-m3"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = ["onnx/model.onnx_data", "onnx/Constant_7_attr__value"]
+
+[[variants]]
+name = "SparseModel::BGEM3"
+cache_key = "BGE-M3"
+huggingface_repo = "BAAI/bge-m3"
+dim = 0
+model_file = "onnx/model.onnx"
+additional_files = ["onnx/model.onnx_data", "onnx/Constant_7_attr__value"]
+
+[[variants]]
+name = "EmbeddingModel::MultilingualE5Small"
+cache_key = "multilingual-e5-small"
+huggingface_repo = "intfloat/multilingual-e5-small"
+dim = 384
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::MultilingualE5Base"
+cache_key = "multilingual-e5-base"
+huggingface_repo = "intfloat/multilingual-e5-base"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::MultilingualE5Large"
+cache_key = "multilingual-e5-large"
+huggingface_repo = "Qdrant/multilingual-e5-large-onnx"
+dim = 1024
+model_file = "model.onnx"
+additional_files = ["model.onnx_data"]
+
+[[variants]]
+name = "EmbeddingModel::NomicEmbedTextV1"
+cache_key = "nomic-embed-text-v1"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::NomicEmbedTextV15"
+cache_key = "nomic-embed-text-v1_5"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1.5"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::NomicEmbedTextV15Q"
+cache_key = "nomic-embed-text-v1_5"
+huggingface_repo = "nomic-ai/nomic-embed-text-v1.5"
+dim = 768
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::MxbaiEmbedLargeV1"
+cache_key = "mxbai-embed-large-v1"
+huggingface_repo = "mixedbread-ai/mxbai-embed-large-v1"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::MxbaiEmbedLargeV1Q"
+cache_key = "mxbai-embed-large-v1"
+huggingface_repo = "mixedbread-ai/mxbai-embed-large-v1"
+dim = 1024
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::GTEBaseENV15"
+cache_key = "gte-base-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-base-en-v1.5"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::GTEBaseENV15Q"
+cache_key = "gte-base-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-base-en-v1.5"
+dim = 768
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::GTELargeENV15"
+cache_key = "gte-large-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-large-en-v1.5"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::GTELargeENV15Q"
+cache_key = "gte-large-en-v1_5"
+huggingface_repo = "Alibaba-NLP/gte-large-en-v1.5"
+dim = 1024
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::ModernBertEmbedLarge"
+cache_key = "ModernBERT-embed-large"
+huggingface_repo = "lightonai/modernbert-embed-large"
+dim = 1024
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::JinaEmbeddingsV2BaseCode"
+cache_key = "jina-embeddings-v2-base-code"
+huggingface_repo = "jinaai/jina-embeddings-v2-base-code"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::JinaEmbeddingsV2BaseEN"
+cache_key = "jina-embeddings-v2-base-en"
+huggingface_repo = "jinaai/jina-embeddings-v2-base-en"
+dim = 768
+model_file = "model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::EmbeddingGemma300M"
+cache_key = "embeddinggemma-300m"
+huggingface_repo = "onnx-community/embeddinggemma-300m-ONNX"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = ["onnx/model.onnx_data"]
+
+[[variants]]
+name = "EmbeddingModel::EmbeddingGemma300MQ4"
+cache_key = "embeddinggemma-300m"
+huggingface_repo = "onnx-community/embeddinggemma-300m-ONNX"
+dim = 768
+model_file = "onnx/model_q4.onnx"
+additional_files = ["onnx/model_q4.onnx_data"]
+
+[[variants]]
+name = "EmbeddingModel::EmbeddingGemma300MQ"
+cache_key = "embeddinggemma-300m"
+huggingface_repo = "onnx-community/embeddinggemma-300m-ONNX"
+dim = 768
+model_file = "onnx/model_quantized.onnx"
+additional_files = ["onnx/model_quantized.onnx_data"]
+
+[[variants]]
+name = "EmbeddingModel::SnowflakeArcticEmbedM"
+cache_key = "snowflake-arctic-embed-m"
+huggingface_repo = "Snowflake/snowflake-arctic-embed-m"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "EmbeddingModel::SnowflakeArcticEmbedMQ"
+cache_key = "snowflake-arctic-embed-m"
+huggingface_repo = "Snowflake/snowflake-arctic-embed-m"
+dim = 768
+model_file = "onnx/model_quantized.onnx"
+additional_files = []
+
+[[variants]]
+name = "RerankerModel::BGERerankerBase"
+cache_key = "BGE-reranker-base"
+huggingface_repo = "BAAI/bge-reranker-base"
+dim = 0
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "RerankerModel::BGERerankerV2M3"
+cache_key = "BGE-reranker-v2-m3"
+huggingface_repo = "rozgo/bge-reranker-v2-m3"
+dim = 0
+model_file = "model.onnx"
+additional_files = ["model.onnx.data"]
+
+[[variants]]
+name = "RerankerModel::JINARerankerV1TurboEn"
+cache_key = "jina-reranker-v1-turbo-en"
+huggingface_repo = "jinaai/jina-reranker-v1-turbo-en"
+dim = 0
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "RerankerModel::JINARerankerV2BaseMultiligual"
+cache_key = "jina-reranker-v2-base-multilingual"
+huggingface_repo = "jinaai/jina-reranker-v2-base-multilingual"
+dim = 0
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "ImageEmbeddingModel::NomicEmbedVisionV15"
+cache_key = "nomic-embed-vision-v1_5"
+huggingface_repo = "nomic-ai/nomic-embed-vision-v1.5"
+dim = 768
+model_file = "onnx/model.onnx"
+additional_files = []
+
+[[variants]]
+name = "ImageEmbeddingModel::ClipVitB32"
+cache_key = "clip-ViT-B-32-vision"
+huggingface_repo = "Qdrant/clip-ViT-B-32-vision"
+dim = 512
+model_file = "model.onnx"
+additional_files = []
+
+[[variants]]
+name = "ImageEmbeddingModel::Resnet50"
+cache_key = "resnet50-onnx"
+huggingface_repo = "Qdrant/resnet50-onnx"
+dim = 2048
+model_file = "model.onnx"
+additional_files = []
+
+[[variants]]
+name = "ImageEmbeddingModel::UnicomVitB16"
+cache_key = "Unicom-ViT-B-16"
+huggingface_repo = "Qdrant/Unicom-ViT-B-16"
+dim = 768
+model_file = "model.onnx"
+additional_files = []
+
+[[variants]]
+name = "ImageEmbeddingModel::UnicomVitB32"
+cache_key = "Unicom-ViT-B-32"
+huggingface_repo = "Qdrant/Unicom-ViT-B-32"
+dim = 512
+model_file = "model.onnx"
+additional_files = []
+
+[[variants]]
+name = "SparseModel::SPLADEPPV1"
+cache_key = "Splade_PP_en_v1"
+huggingface_repo = "Qdrant/Splade_PP_en_v1"
+dim = 0
+model_file = "model.onnx"
+additional_files = []

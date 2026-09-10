@@ -2,6 +2,19 @@
 
 ## Repository state
 
+### 2026-09-10 source-checkpoint closeout update
+
+The exact repaired source candidate is accepted for source-only checkpoint closeout. Root-owned
+verification recorded manifest 39/43, central 162/162, and runtime 47/47 (209 tests total), plus
+shell syntax, ShellCheck, Ruff check/format, basedpyright with zero diagnostics, candidate
+fingerprinting, and a clean diff check. An isolated native Linux x86_64 ORT probe passed without
+altering the shared cache. Fresh independent specification/quality and deep security/architecture
+reviews approved the frozen candidate. `VERSION` 6.0.3 is assigned; the remaining actions are
+commit, annotated `checkpoint/6.0.3` tag, source push, and remote reconciliation.
+
+This is not artifact-release approval. Do not create `v6.0.2`, upload model/runtime assets, or
+create a GitHub Release. The publication blockers below remain active.
+
 The pre-governance `main` began this lane at `7ba0093`; the committed governance baseline is
 `71af438` at version 6.0.1 and tag `checkpoint/6.0.1`. FastEmbed 6.0.2 model-cache and ORT rc13
 runtime changes remain dirty, unaccepted working-tree changes. Version 6.0.2 is reserved solely
@@ -80,6 +93,84 @@ group; Rozgo is the sole `NOASSERTION`. The helper installer deliberately reject
 before cache mutation. A read-only native Linux x86_64 real-archive probe is recorded below;
 macOS and Windows coverage is simulated only and both require real-host qualification. No model
 artifact was downloaded, and publication remains blocked.
+
+The earlier two Medium findings are repaired locally: both cache installers flush published output
+files and directory commit points before success and preserve recovery state under
+postpublication-sync uncertainty, while model preparation rejects initial per-member/cumulative
+oversize before staging and copy-time growth beyond the same bounds. Focused RED was four methods
+with four failures and one missing-class error; the same selection passed GREEN. The complete local
+gate passed 131 central and 38 runtime tests (169 total), but fresh independent review is still
+required and no native archive probe was rerun in this no-external-mutation lane.
+
+The latest deep review then found one High preparation TOCTOU boundary and two Medium issues.
+Preparation now holds source/stage/archive descriptors through metadata, copy, archive construction,
+and completed-archive validation; scans inventory incrementally with fixed 8,192-entry and
+32-component caps plus immediate unexpected-entry rejection; and maps postpublication model/runtime
+domain validation failures to durability-unknown while preserving visible output. Focused RED was
+five selected methods producing four failures and two errors; the final eight-method focused set,
+including the inherited byte-bound regressions and a held-stage substitution case, passed GREEN.
+An exact-site tightening then reproduced two leaked postpublication domain errors before both
+passed GREEN under the expanded catch boundary.
+The complete local gate passed 136 central and 39 runtime tests (175 total), but fresh independent
+review remains required and no native archive probe was rerun in this no-external-action lane.
+
+The final cache review then found one High extracted-output binding gap and Medium publication-state
+coverage gaps. Runtime and model extraction now retain reread leaf digest/identity/state evidence,
+validate the exact staged inventory before rename, and reopen and rehash the exact published tree
+before accepting durability. Each atomic helper records successful rename at the syscall boundary,
+so later helper-local checks, validation, sync, descriptor closes, and nested or outer context exits
+become durability-unknown while preserving visible output and private recovery state. Eight focused
+tests were RED for the requested attacks and failure boundaries, and a ninth RED closed the outer
+model-cache context boundary; all nine are GREEN. The complete no-external/no-Git local gate passed
+manifest 39/43, central 141/141, runtime 43/43 (184 tests), shell syntax, ShellCheck, Ruff
+check/format, and basedpyright with zero diagnostics. Git diff checks were excluded by the lane
+boundary. Fresh independent review remains required.
+
+The subsequent deep review found one High atomic-manifest binding gap and two Medium transaction
+state gaps. The manifest replacement helper now binds the exact prospective SHA-256 and a stable
+descriptor-backed mutable state to the candidate on both sides of exchange, so an equal-size
+same-inode rewrite is rejected and the original is restored when rollback succeeds. Archive
+publication records successful `linkat` or rename inside the committing helper, and manifest update
+records a successful atomic replacement before leaving its advisory lock. Post-commit identity,
+context-exit, synchronization, descriptor-close, rollback-failure, and lock-release errors are now
+durability-unknown; visible outputs and private recovery entries are preserved and reported. Six
+focused regressions were RED with one assertion failure and five ordinary errors before all six
+passed GREEN. The complete no-external/no-Git gate passed manifest 39/43, central 147/147, runtime
+43/43 (190 tests), shell syntax, ShellCheck, Ruff check/format, and basedpyright with zero
+diagnostics. Git diff checks were excluded by the lane boundary. Fresh independent review remains
+required.
+
+The latest deep review retained one Medium resource-bound finding. Runtime final-output validation
+now consumes a context-managed directory scanner, accepts exactly one expected root library, and
+rejects the first unexpected or additional entry without materializing the remaining inventory.
+Because portable cleanup cannot condition deletion on held inode identity, runtime and model
+staging finalizers now verify only the owned root and preserve the recovery tree without recursive
+inventory. Five focused tests failed RED at the former `os.listdir` boundaries and passed GREEN.
+The complete no-external/no-Git gate passed manifest 39/43, central 153/153, runtime 47/47 (200
+tests), shell syntax, ShellCheck, Ruff check/format, and basedpyright with zero diagnostics. Git
+diff and candidate fingerprint checks were excluded by the lane boundary. Fresh independent review
+remains required.
+
+The subsequent acquisition/preflight review retained two Medium findings. GitHub downloads now use
+one exact `--output -` asset stream and a descriptor-relative `O_EXCL` staging leaf instead of
+`-D`/`--clobber`. Expected and maximum bytes are enforced while reading, excess is rejected before
+writing, and a foreign leaf replacement is preserved. Reviewed artifact admission is bounded by the
+trusted release inventory and rejects unexpected, duplicate, or over-count entries without scanning
+an attacker-controlled tail. The eight-method RED run exited 1 with three failures and five errors;
+the same selection passed 8/8 GREEN. The full no-external/no-Git gate passed manifest 39/43, central
+161/161, runtime 47/47 (208 total), shell syntax, ShellCheck, Ruff check/format, and basedpyright with
+zero diagnostics. This remains an unaccepted candidate requiring fresh independent review.
+
+The remaining Medium review finding is now repaired. The reviewed-artifact loop no longer uses
+`Path.iterdir()`, whose eager `os.listdir()` implementation materialized the whole hostile directory
+before admission; it directly owns a context-managed `os.scandir()` iterator. Four focused tests
+for exact, unexpected, duplicate, and over-count inventories all forbid `os.listdir`; the three
+invalid synthetic streams also verify scanner closure without consuming the tail. RED failed 4/4
+at the eager-list boundary and the same selection passed 4/4 GREEN. The broader security class
+passed 129/129, and the complete no-external/no-Git gate passed manifest 39/43, central 162/162,
+runtime 47/47 (209 total), shell syntax, ShellCheck, Ruff check/format, and basedpyright with zero
+diagnostics. Git diff/fingerprint evidence and fresh independent reviews remain outstanding; this
+candidate is not accepted.
 
 The remaining **High publication blocker** is publication licensing and notice delivery. Recover
 and audit the exact license, copyright, and notice materials for every canonical model
