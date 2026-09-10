@@ -9,8 +9,9 @@ verification recorded manifest 39/43, central 162/162, and runtime 47/47 (209 te
 shell syntax, ShellCheck, Ruff check/format, basedpyright with zero diagnostics, candidate
 fingerprinting, and a clean diff check. An isolated native Linux x86_64 ORT probe passed without
 altering the shared cache. Fresh independent specification/quality and deep security/architecture
-reviews approved the frozen candidate. `VERSION` 6.0.3 is assigned; the remaining actions are
-commit, annotated `checkpoint/6.0.3` tag, source push, and remote reconciliation.
+reviews approved the frozen candidate. `VERSION` 6.0.3 completed as commit `a665b9e`, annotated
+tag `checkpoint/6.0.3`, and an exact-ref source push; the peeled remote tag and `origin/main`
+resolve to that commit.
 
 This is not artifact-release approval. Do not create `v6.0.2`, upload model/runtime assets, or
 create a GitHub Release. The publication blockers below remain active.

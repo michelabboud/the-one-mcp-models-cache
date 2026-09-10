@@ -79,14 +79,14 @@
 ## Current repository state
 
 The governance foundation is established. The FastEmbed 6.0.2 model manifest, cache tooling, and
-ONNX Runtime rc13 bootstrap is accepted for source-checkpoint 6.0.3 closeout after independent
-approval. Commit, annotated checkpoint tag, and source push are still pending at this record's
-write time. It remains unpublished: the 6.0.2 artifact release is separately blocked by
-provenance, licensing, notices, asset acquisition, and native-host qualification.
+ONNX Runtime rc13 bootstrap completed source checkpoint 6.0.3 at commit `a665b9e`, annotated tag
+`checkpoint/6.0.3`, and pushed `origin/main`. It remains unpublished: the 6.0.2 artifact release
+is separately blocked by provenance, licensing, notices, asset acquisition, and native-host
+qualification.
 
 The source-acceptance order completed as root full gate; real native ORT probe; ordered
 candidate-fingerprint freeze; fresh Sol specification/quality and Astra security/architecture
-reviews. The remaining source-closeout steps are checkpoint commit, tag, and push. The historical `fastembed-v4`
+reviews; checkpoint commit; annotated tag; and source push. The historical `fastembed-v4`
 release remains the only model-asset release. The 21 `download-required`, 16
 `provenance-required`, and two `refresh-required` groups; Rozgo `NOASSERTION`; exact
 license/copyright/notice recovery and notice delivery; artifact acquisition; and native-host

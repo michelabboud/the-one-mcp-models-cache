@@ -1,6 +1,6 @@
 # FastEmbed 6.0.2 and ORT rc13 Cache Plan
 
-**Status:** Source-checkpoint closeout in progress; publication blocked
+**Status:** Source checkpoint complete at `checkpoint/6.0.3`; publication blocked
 
 **Written:** 2026-09-08
 
@@ -42,10 +42,10 @@ modifying the shared cache. After the ordered candidate fingerprint was frozen, 
 specification/quality and deep security/architecture reviews approved the source candidate for a
 source-only checkpoint.
 
-`VERSION` 6.0.3 is assigned to that source checkpoint. The only remaining closeout actions are a
-logical commit, annotated `checkpoint/6.0.3` tag, exact-ref source push, and remote reconciliation.
-This approval does not authorize an artifact tag, model upload, GitHub Release, or publication work.
-The publication blockers in Tasks 7 and 8 remain unchanged.
+`VERSION` 6.0.3 was committed as `a665b9e`, annotated `checkpoint/6.0.3`, and pushed to
+`origin/main`; the peeled remote tag resolves to that exact commit. This approval does not
+authorize an artifact tag, model upload, GitHub Release, or publication work. The publication
+blockers in Tasks 7 and 8 remain unchanged.
 
 Before version closeout, the final review requires the following verified repairs:
 

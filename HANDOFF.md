@@ -2,11 +2,12 @@
 
 See [docs/handoffs/2026-09-08-fastembed-6-ort-cache-handoff.md](docs/handoffs/2026-09-08-fastembed-6-ort-cache-handoff.md).
 
-- Repository governance baseline is `de405458` at version 6.0.2 and `checkpoint/6.0.2`; this
-  closeout creates the next source-only checkpoint, `checkpoint/6.0.3`.
-- Source/tooling checkpoint 6.0.3 is accepted locally after the 209-test gate, isolated Linux ORT
-  probe, candidate freeze, and independent specification/quality plus deep security/architecture
-  approval; commit/tag/push reconciliation is the current closeout action.
+- Repository governance baseline is `de405458` at version 6.0.2 and `checkpoint/6.0.2`; the next
+  source-only checkpoint completed as `checkpoint/6.0.3`.
+- Source/tooling checkpoint 6.0.3 completed at `a665b9e` and annotated `checkpoint/6.0.3` after
+  the 209-test gate, isolated Linux ORT probe, candidate freeze, and independent
+  specification/quality plus deep security/architecture approval. Remote `origin/main` and the
+  peeled tag resolve to that exact commit.
 - Second-pass repairs bind release checks to the canonical committed manifests, validate origin
   before contact, require all six provenance maps before preparation, reject ORT root aliases and
   symlink ancestors, and bound Hugging Face responses plus model/runtime extraction. Newest repairs
@@ -36,9 +37,9 @@ See [docs/handoffs/2026-09-08-fastembed-6-ort-cache-handoff.md](docs/handoffs/20
   exact source candidate subsequently passed root-owned diff/fingerprint verification, an isolated
   Linux ORT probe, and fresh independent reviews. The prior `31d401d9…` verdict remains rejected;
   it is historical evidence, not the accepted candidate.
-- Source acceptance is complete. Version 6.0.2 remains the governance-only checkpoint; 6.0.3 is
-  assigned to this source/tooling checkpoint. Commit, annotated checkpoint tag, exact source push,
-  and remote reconciliation are the remaining closeout actions.
+- Source acceptance and checkpoint closeout are complete. Version 6.0.2 remains the
+  governance-only checkpoint; `checkpoint/6.0.3` is the source/tooling checkpoint. Publication
+  remains a separate blocked task.
 - After the source checkpoint, publication remains blocked by the 21 `download-required`, 16
   `provenance-required`, and two `refresh-required` groups; Rozgo `NOASSERTION`; exact
   license/copyright/notice recovery including ONNX Runtime 1.28.0 `ThirdPartyNotices.txt`; reviewed
