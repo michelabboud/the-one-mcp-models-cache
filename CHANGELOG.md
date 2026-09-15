@@ -3,6 +3,15 @@
 All notable changes to the repository metadata and tooling are recorded here.
 Third-party model and runtime versions are recorded separately in their manifests.
 
+## [6.0.4] - 2026-09-15
+
+### Changed
+
+- Reconciled the root third-party license inventory for all 39 FastEmbed artifact groups with their
+  original-model and selected cache/conversion provenance. Corrected Alibaba GTE to Apache-2.0,
+  recorded Jina reranker v2 as CC-BY-NC-4.0 (a project-user commercial-use decision), and clarified
+  the separate Apache/MIT provenance for BGE reranker, Unicom, and Gemma terms.
+
 ## [6.0.3] - 2026-09-10
 
 ### Changed

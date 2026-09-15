@@ -14,7 +14,7 @@ explicitly marked `refresh-required` in `models-manifest.toml`.
 ## Original-model and cache-repository license
 
 The original models and the exact Alibaba-NLP cache repositories selected by FastEmbed declare
-the MIT License. Both provenance layers are recorded explicitly in `models-manifest.toml`.
+Apache-2.0. Both provenance layers are recorded explicitly in `models-manifest.toml`.
 
 ## Authors
 

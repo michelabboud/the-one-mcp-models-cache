@@ -13,7 +13,10 @@ ONNX graphs plus their external-data files from this single cache repository.
 
 The model repository declares the custom `gemma` license. Redistribution and use are governed by
 the canonical [Gemma terms](https://ai.google.dev/gemma/terms); they are not replaced or
-relicensed by this repository. Review the current terms before preparing or publishing an asset.
+relicensed by this repository. The terms permit commercial distribution subject to their conditions:
+pass the use restrictions to downstream recipients, provide the agreement, include the required
+notice with non-hosted distributions, and mark modified files. Review the current terms before
+preparing or publishing an asset.
 
 ## Conversion/cache-repository license and provenance
 

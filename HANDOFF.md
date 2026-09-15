@@ -8,6 +8,11 @@ See [docs/handoffs/2026-09-08-fastembed-6-ort-cache-handoff.md](docs/handoffs/20
   the 209-test gate, isolated Linux ORT probe, candidate freeze, and independent
   specification/quality plus deep security/architecture approval. Remote `origin/main` and the
   peeled tag resolve to that exact commit.
+- License-inventory checkpoint 6.0.4 corrects the 39-group third-party license records without
+  changing any payload: Alibaba GTE is Apache-2.0; Jina reranker v2 is CC-BY-NC-4.0 and is a
+  project-user commercial-use decision; Gemma distribution is conditional under its terms; and
+  BGE-reranker/Unicom retain separate source and conversion provenance. It is `checkpoint/6.0.4`,
+  not an artifact tag or GitHub Release.
 - Second-pass repairs bind release checks to the canonical committed manifests, validate origin
   before contact, require all six provenance maps before preparation, reject ORT root aliases and
   symlink ancestors, and bound Hugging Face responses plus model/runtime extraction. Newest repairs
@@ -41,7 +46,7 @@ See [docs/handoffs/2026-09-08-fastembed-6-ort-cache-handoff.md](docs/handoffs/20
   governance-only checkpoint; `checkpoint/6.0.3` is the source/tooling checkpoint. Publication
   remains a separate blocked task.
 - After the source checkpoint, publication remains blocked by the 21 `download-required`, 16
-  `provenance-required`, and two `refresh-required` groups; Rozgo `NOASSERTION`; exact
-  license/copyright/notice recovery including ONNX Runtime 1.28.0 `ThirdPartyNotices.txt`; reviewed
-  notice delivery; artifact acquisition; and native-host qualification. These are publication
-  blockers, not source-checkpoint blockers. No model artifact was downloaded.
+  `provenance-required`, and two `refresh-required` groups; exact license/copyright/notice
+  recovery including ONNX Runtime 1.28.0 `ThirdPartyNotices.txt`; reviewed notice delivery;
+  artifact acquisition; and native-host qualification. These are publication blockers, not
+  source-checkpoint blockers. No model artifact was downloaded.

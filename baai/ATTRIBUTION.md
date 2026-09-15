@@ -36,10 +36,11 @@ For BGE-reranker-v2-m3, FastEmbed selects
 [`rozgo/bge-reranker-v2-m3`](https://huggingface.co/rozgo/bge-reranker-v2-m3), an ONNX export of the
 original [`BAAI/bge-reranker-v2-m3`](https://huggingface.co/BAAI/bge-reranker-v2-m3). The official
 BAAI source page declares Apache-2.0 for the original model. The official Rozgo cache page declares
-no license metadata. Therefore the conversion/cache-repository license is unresolved and must be
-recorded as `NOASSERTION`; redistribution of that cache artifact remains blocked until its rights
-are established independently. The original model's Apache-2.0 declaration does not supply a
-license for the separate Rozgo export.
+no license metadata. `models-manifest.toml` retains `NOASSERTION` for that direct cache-page
+metadata, and an eventual asset release must record and hash-match the exact conversion provenance.
+The root license inventory records the artifact as Apache-2.0-derived from the Apache-2.0 original;
+missing separate Rozgo metadata is not presented as an independent prohibition. Preserve the
+original Apache-2.0 notices and the conversion provenance with any distribution.
 
 Other BAAI-family records retain the licenses declared by their own official source and selected
 cache pages. FastEmbed also selects Xenova and Qdrant ONNX conversion repositories, whose

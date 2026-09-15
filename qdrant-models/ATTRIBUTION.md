@@ -20,9 +20,10 @@ generic local license copy is the exact text for every component.
 
 The Qdrant BGE, multilingual-E5, ResNet-50, Unicom, and Splade conversion/cache repositories in
 this manifest declare Apache-2.0; the Qdrant CLIP cache declares MIT. The original models remain
-under their own licenses: OpenAI CLIP is MIT; Microsoft ResNet-50, DeepGlint Unicom, and
-Splade_PP_en_v1 are Apache-2.0. `models-manifest.toml` records both repositories and both license
-fields so a conversion license is never presented as relicensing the original model.
+under their own licenses: OpenAI CLIP is MIT; Microsoft ResNet-50 and Splade_PP_en_v1 are
+Apache-2.0; and the DeepGlint Unicom source repository is MIT while the Qdrant Unicom artifacts
+declare Apache-2.0. `models-manifest.toml` records both repositories and both license fields so a
+conversion license is never presented as relicensing the original model.
 
 Before any publication, recover and audit the exact upstream license, copyright, and notice texts
 for every canonical Qdrant cache repository and every corresponding original-model repository.

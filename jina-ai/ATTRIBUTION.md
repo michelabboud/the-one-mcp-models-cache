@@ -2,17 +2,19 @@
 
 ## Models
 
-| Model | Type | Multilingual | Hugging Face |
-|-------|------|-------------|-------------|
-| jina-reranker-v1-turbo-en | Reranker | No (English) | [jinaai/jina-reranker-v1-turbo-en](https://huggingface.co/jinaai/jina-reranker-v1-turbo-en) |
-| jina-reranker-v2-base-multilingual | Reranker | Yes (100+ languages) | [jinaai/jina-reranker-v2-base-multilingual](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) |
-| jina-embeddings-v2-base-code | Embedding | Code + English | [jinaai/jina-embeddings-v2-base-code](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) |
-| jina-embeddings-v2-base-en | Embedding | English | [jinaai/jina-embeddings-v2-base-en](https://huggingface.co/jinaai/jina-embeddings-v2-base-en) |
+| Model | Type | Multilingual | License | Hugging Face |
+|-------|------|-------------|---------|-------------|
+| jina-reranker-v1-turbo-en | Reranker | No (English) | Apache-2.0 | [jinaai/jina-reranker-v1-turbo-en](https://huggingface.co/jinaai/jina-reranker-v1-turbo-en) |
+| jina-reranker-v2-base-multilingual | Reranker | Yes (100+ languages) | CC-BY-NC-4.0 | [jinaai/jina-reranker-v2-base-multilingual](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) |
+| jina-embeddings-v2-base-code | Embedding | Code + English | Apache-2.0 | [jinaai/jina-embeddings-v2-base-code](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) |
+| jina-embeddings-v2-base-en | Embedding | English | Apache-2.0 | [jinaai/jina-embeddings-v2-base-en](https://huggingface.co/jinaai/jina-embeddings-v2-base-en) |
 
 ## Original-model and cache-repository license
 
-The original models and the exact Jina cache repositories selected by FastEmbed declare Apache
-License 2.0. Both provenance layers are recorded explicitly in `models-manifest.toml`.
+The three Apache-2.0 records above are covered by `jina-ai/LICENSE`. The multilingual v2 reranker
+is CC-BY-NC-4.0: it may be used, modified, and evaluated for non-commercial purposes, but it must
+not be presented as commercially permitted. Project users decide whether that restriction fits
+their use. Both provenance layers are recorded explicitly in `models-manifest.toml`.
 
 ## Authors
 

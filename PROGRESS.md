@@ -78,6 +78,13 @@
 
 ## Current repository state
 
+On 2026-09-15, the root `LICENSE` received a complete 39-artifact-group third-party license
+inventory. It distinguishes original-model rights from cache/conversion provenance without changing
+any payload. Alibaba GTE is Apache-2.0; Jina reranker v2 is CC-BY-NC-4.0 and remains a project-user
+commercial-use decision; Gemma distribution is conditionally permitted under its terms; and the
+BGE-reranker/Unicom entries document their separate source and conversion provenance. Exact
+license/copyright/notice recovery and the required notice-delivery design remain publication work.
+
 The governance foundation is established. The FastEmbed 6.0.2 model manifest, cache tooling, and
 ONNX Runtime rc13 bootstrap completed source checkpoint 6.0.3 at commit `a665b9e`, annotated tag
 `checkpoint/6.0.3`, and pushed `origin/main`. It remains unpublished: the 6.0.2 artifact release

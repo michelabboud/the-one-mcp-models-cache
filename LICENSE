@@ -11,6 +11,59 @@ Third-party models, model weights, ONNX conversions, native runtimes, notices, a
 are excluded from the Repository Work. They remain governed solely by their respective upstream
 licenses and terms. Nothing in this notice expands, replaces, or restricts those upstream terms.
 
+## Third-party model license inventory
+
+This is the current license inventory for the FastEmbed 6.0.2 artifact groups declared in
+`models-manifest.toml`, reviewed on 2026-09-15. It records the model/original license separately
+from the selected cache or ONNX-conversion repository where that distinction matters. A listed
+license is not an assertion that a locally downloaded file matches a particular upstream revision;
+release admission still requires an exact revision and file-hash match.
+
+| Artifact group | Model/original license | Selected cache or conversion license | Conditions / source |
+|---|---|---|---|
+| all-MiniLM-L6-v2 | Apache-2.0 | Apache-2.0 | [Sentence Transformers](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) / [Qdrant ONNX](https://huggingface.co/Qdrant/all-MiniLM-L6-v2-onnx) |
+| all-MiniLM-L6-v2-Q | Apache-2.0 | Apache-2.0 | [Sentence Transformers](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) / [Xenova ONNX](https://huggingface.co/Xenova/all-MiniLM-L6-v2) |
+| all-MiniLM-L12-v2 | Apache-2.0 | Apache-2.0-derived conversion | [Sentence Transformers](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2) / [Xenova ONNX](https://huggingface.co/Xenova/all-MiniLM-L12-v2) |
+| all-mpnet-base-v2 | Apache-2.0 | Apache-2.0-derived conversion | [Sentence Transformers](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) / [Xenova ONNX](https://huggingface.co/Xenova/all-mpnet-base-v2) |
+| paraphrase-multilingual-MiniLM-L12-v2 | Apache-2.0 | Apache-2.0-derived conversion | [Sentence Transformers](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) / [Xenova ONNX](https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2) |
+| paraphrase-multilingual-MiniLM-L12-v2-Q | Apache-2.0 | Apache-2.0 | [Sentence Transformers](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) / [Qdrant ONNX](https://huggingface.co/Qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q) |
+| paraphrase-multilingual-mpnet-base-v2 | Apache-2.0 | Apache-2.0-derived conversion | [Sentence Transformers](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2) / [Xenova ONNX](https://huggingface.co/Xenova/paraphrase-multilingual-mpnet-base-v2) |
+| BGE-small-en-v1.5 | MIT | MIT-derived conversion | [BAAI](https://huggingface.co/BAAI/bge-small-en-v1.5) / [Xenova ONNX](https://huggingface.co/Xenova/bge-small-en-v1.5) |
+| BGE-small-en-v1.5-Q | MIT | Apache-2.0 | [BAAI](https://huggingface.co/BAAI/bge-small-en-v1.5) / [Qdrant ONNX](https://huggingface.co/Qdrant/bge-small-en-v1.5-onnx-Q) |
+| BGE-base-en-v1.5 | MIT | MIT-derived conversion | [BAAI](https://huggingface.co/BAAI/bge-base-en-v1.5) / [Xenova ONNX](https://huggingface.co/Xenova/bge-base-en-v1.5) |
+| BGE-base-en-v1.5-Q | MIT | Apache-2.0 | [BAAI](https://huggingface.co/BAAI/bge-base-en-v1.5) / [Qdrant ONNX](https://huggingface.co/Qdrant/bge-base-en-v1.5-onnx-Q) |
+| BGE-large-en-v1.5 | MIT | MIT-derived conversion | [BAAI](https://huggingface.co/BAAI/bge-large-en-v1.5) / [Xenova ONNX](https://huggingface.co/Xenova/bge-large-en-v1.5) |
+| BGE-large-en-v1.5-Q | MIT | Apache-2.0 | [BAAI](https://huggingface.co/BAAI/bge-large-en-v1.5) / [Qdrant ONNX](https://huggingface.co/Qdrant/bge-large-en-v1.5-onnx-Q) |
+| BGE-small-zh-v1.5 | MIT | MIT-derived conversion | [BAAI](https://huggingface.co/BAAI/bge-small-zh-v1.5) / [Xenova ONNX](https://huggingface.co/Xenova/bge-small-zh-v1.5) |
+| BGE-large-zh-v1.5 | MIT | MIT-derived conversion | [BAAI](https://huggingface.co/BAAI/bge-large-zh-v1.5) / [Xenova ONNX](https://huggingface.co/Xenova/bge-large-zh-v1.5) |
+| BGE-M3 | MIT | MIT | [BAAI](https://huggingface.co/BAAI/bge-m3) |
+| multilingual-e5-small | MIT | MIT | [intfloat](https://huggingface.co/intfloat/multilingual-e5-small) |
+| multilingual-e5-base | MIT | MIT | [intfloat](https://huggingface.co/intfloat/multilingual-e5-base) |
+| multilingual-e5-large | MIT | Apache-2.0 | [intfloat](https://huggingface.co/intfloat/multilingual-e5-large) / [Qdrant ONNX](https://huggingface.co/Qdrant/multilingual-e5-large-onnx) |
+| nomic-embed-text-v1 | Apache-2.0 | Apache-2.0 | [Nomic AI](https://huggingface.co/nomic-ai/nomic-embed-text-v1) |
+| nomic-embed-text-v1.5 | Apache-2.0 | Apache-2.0 | [Nomic AI](https://huggingface.co/nomic-ai/nomic-embed-text-v1.5) |
+| mxbai-embed-large-v1 | Apache-2.0 | Apache-2.0 | [mixedbread.ai](https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1) |
+| gte-base-en-v1.5 | Apache-2.0 | Apache-2.0 | [Alibaba-NLP](https://huggingface.co/Alibaba-NLP/gte-base-en-v1.5) |
+| gte-large-en-v1.5 | Apache-2.0 | Apache-2.0 | [Alibaba-NLP](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5) |
+| ModernBERT-embed-large | Apache-2.0 | Apache-2.0 | [LightOn](https://huggingface.co/lightonai/modernbert-embed-large) |
+| jina-embeddings-v2-base-code | Apache-2.0 | Apache-2.0 | [Jina AI](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) |
+| jina-embeddings-v2-base-en | Apache-2.0 | Apache-2.0 | [Jina AI](https://huggingface.co/jinaai/jina-embeddings-v2-base-en) |
+| embeddinggemma-300m | Gemma Terms | Gemma Terms | Conditional commercial use and redistribution; include the Gemma terms and required notice. [Google model](https://huggingface.co/google/embeddinggemma-300m) / [terms](https://ai.google.dev/gemma/terms) |
+| snowflake-arctic-embed-m | Apache-2.0 | Apache-2.0 | [Snowflake](https://huggingface.co/Snowflake/snowflake-arctic-embed-m) |
+| BGE-reranker-base | MIT | MIT | [BAAI](https://huggingface.co/BAAI/bge-reranker-base) |
+| BGE-reranker-v2-m3 | Apache-2.0 | Apache-2.0-derived ONNX conversion | [BAAI](https://huggingface.co/BAAI/bge-reranker-v2-m3) / [Rozgo ONNX](https://huggingface.co/rozgo/bge-reranker-v2-m3) |
+| jina-reranker-v1-turbo-en | Apache-2.0 | Apache-2.0 | [Jina AI](https://huggingface.co/jinaai/jina-reranker-v1-turbo-en) |
+| jina-reranker-v2-base-multilingual | CC-BY-NC-4.0 | CC-BY-NC-4.0 | Non-commercial self-hosted use; project user must decide whether it fits their use. [Jina AI](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) |
+| nomic-embed-vision-v1.5 | Apache-2.0 | Apache-2.0 | [Nomic AI](https://huggingface.co/nomic-ai/nomic-embed-vision-v1.5) |
+| clip-ViT-B-32-vision | MIT | MIT | [OpenAI CLIP](https://github.com/openai/CLIP) / [Qdrant ONNX](https://huggingface.co/Qdrant/clip-ViT-B-32-vision) |
+| resnet50-onnx | Apache-2.0 | Apache-2.0 | [Microsoft](https://huggingface.co/microsoft/resnet-50) / [Qdrant ONNX](https://huggingface.co/Qdrant/resnet50-onnx) |
+| Unicom-ViT-B-16 | MIT source repository | Apache-2.0 ONNX artifact | [DeepGlint](https://github.com/deepglint/unicom) / [Qdrant ONNX](https://huggingface.co/Qdrant/Unicom-ViT-B-16) |
+| Unicom-ViT-B-32 | MIT source repository | Apache-2.0 ONNX artifact | [DeepGlint](https://github.com/deepglint/unicom) / [Qdrant ONNX](https://huggingface.co/Qdrant/Unicom-ViT-B-32) |
+| Splade_PP_en_v1 | Apache-2.0 | Apache-2.0 | [prithivida](https://huggingface.co/prithivida/Splade_PP_en_v1) / [Qdrant ONNX](https://huggingface.co/Qdrant/Splade_PP_en_v1) |
+
+The ONNX Runtime native runtime is separately governed by the MIT License recorded in
+`runtime/ort-sys-2.0.0-rc.13/LICENSE` and its attribution records.
+
 THE REPOSITORY WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
 INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
 AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
