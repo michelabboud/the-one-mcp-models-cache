@@ -3,6 +3,15 @@
 All notable changes to the repository metadata and tooling are recorded here.
 Third-party model and runtime versions are recorded separately in their manifests.
 
+## [6.0.5] - 2026-11-14
+
+### Added
+
+- `runtime/onnxruntime-1.32.0/`: manifest and provenance for two x86_64 Linux ONNX Runtime 1.32.0
+  artifacts needed by ort-sys 2.0.0-rc.15 (FastEmbed 7.1.2+): a self-built static library built with
+  `--no_telemetry` and verified telemetry-free and runnable, and Microsoft's official shared-library
+  release. Binaries are not uploaded yet; checksums and the intended release tag `ort-1.32.0` are recorded.
+
 ## [6.0.4] - 2026-09-15
 
 ### Changed

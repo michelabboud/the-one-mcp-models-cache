@@ -1,0 +1,42 @@
+# ONNX Runtime 1.32.0 native libraries for x86_64 Linux, recorded 2026-11-14.
+# Separate from runtime/ort-sys-2.0.0-rc.13 (pyke prebuilts, ORT 1.28.0) and from
+# models-manifest.toml. Binaries are GitHub Release assets, never git objects (ADR in docs/adr).
+# No release asset is uploaded yet: release_tag is the intended destination, not evidence of one.
+
+[meta]
+schema_version = 1
+component = "onnxruntime-native"
+release_repo = "michelabboud/the-one-mcp-models-cache"
+release_tag = "ort-1.32.0"
+onnxruntime_version = "1.32.0"
+onnxruntime_release_url = "https://github.com/microsoft/onnxruntime/releases/tag/v1.32.0"
+onnxruntime_license = "MIT"
+onnxruntime_license_url = "https://github.com/microsoft/onnxruntime/blob/v1.32.0/LICENSE"
+consumer = "ort / ort-sys 2.0.0-rc.15 (fastembed 7.1.2 to 7.7.0), via ORT_LIB_LOCATION=<dir>/lib"
+
+[[archives]]
+target = "x86_64-unknown-linux-gnu"
+linkage = "static"
+execution_provider = "CPU"
+origin = "built from the official v1.32.0 source by Michel Abboud on 2026-11-14 with --no_telemetry; component static libraries merged into one archive"
+release_asset = "onnxruntime-1.32.0-x86_64-unknown-linux-gnu-static-notelemetry.tar.xz"
+archive_format = "tar+xz"
+sha256 = "9be25a36437ae5101cd3dcb93553be23a76a9f0012caf9c48afd21ce3e4cf24d"
+expected_library = "lib/libonnxruntime.a"
+expected_library_sha256 = "aaa72624f04629920d5a342ef118edfc062fc0cb2ebbd859c17b971c9945fab9"
+merged_component_count = 64
+verified = "2026-11-14: no 1DS telemetry, libcurl or mbedTLS members or symbols; no events.data.microsoft.com string; OrtGetApiBase and CPU provider exported; version string 1.32.0; a C program linked against it ran all-MiniLM-L6-v2 inference (output 1x4x384), runtime deps libc/libstdc++/libm/libgcc_s only"
+known_issue = "QgemmU8S8KernelAvx2.S.o lacks .note.GNU-stack (linker: executable stack implied); rebuild with -Wa,--noexecstack"
+
+[[archives]]
+target = "x86_64-unknown-linux-gnu"
+linkage = "shared"
+execution_provider = "CPU"
+origin = "Microsoft official release asset, unmodified"
+source_url = "https://github.com/microsoft/onnxruntime/releases/download/v1.32.0/onnxruntime-linux-x64-1.32.0.tgz"
+release_asset = "onnxruntime-linux-x64-1.32.0.tgz"
+archive_format = "tar+gzip"
+sha256 = "bb169b7e374731730d2ae406fb39de7be4b315f413a9132efe896261c31bb503"
+sha256_matches_github_digest = true
+expected_library = "lib/libonnxruntime.so.1.32.0"
+expected_library_sha256 = "4213d6d8c42ac4754865849cb139d31fc39127db6a326babf90bbc81a6eb52fc"
