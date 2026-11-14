@@ -20,4 +20,4 @@ Use the static one with `ORT_LIB_LOCATION=<extracted dir>/lib`. Local copies on 
 `SHA256SUMS`). ONNX Runtime is MIT licensed; its license and third-party notices travel inside the
 source tree it was built from.
 
-Status: recorded, not yet published. The release assets go to tag `ort-1.32.0` only on the owner's word.
+Status: published 2026-11-14 as GitHub release `ort-1.32.0` on the owner's word ("publish ort-1.32.0"); both assets re-downloaded and verified against the SHA-256 above.

@@ -1,7 +1,7 @@
 # ONNX Runtime 1.32.0 native libraries for x86_64 Linux, recorded 2026-11-14.
 # Separate from runtime/ort-sys-2.0.0-rc.13 (pyke prebuilts, ORT 1.28.0) and from
 # models-manifest.toml. Binaries are GitHub Release assets, never git objects (ADR in docs/adr).
-# No release asset is uploaded yet: release_tag is the intended destination, not evidence of one.
+# Published 2026-11-14 as release ort-1.32.0; both assets re-downloaded and SHA-256 verified.
 
 [meta]
 schema_version = 1
